@@ -1209,157 +1209,217 @@
 
 
   <!-- Left hand finger joints -->
-  <joint name="LHandThumbLink1" type="fixed">
+  <joint name="LHandThumbLink1" type="revolute">
     <parent link="LHandLink"/>
     <child link="LHandThumb0Link"/>
-    <origin rpy="0.0 0.2 0.9" xyz="0.02 0.016 -0.016"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.02 0.016 -0.016"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandThumbLink2" type="fixed">
+  <joint name="LHandThumbLink2" type="revolute">
     <parent link="LHandThumb0Link"/>
     <child link="LHandThumb1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.045 0.0 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandThumbLink3" type="fixed">
+  <joint name="LHandThumbLink3" type="revolute">
     <parent link="LHandThumb1Link"/>
     <child link="LHandThumb2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.026 0.0 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandIndexLink1" type="fixed">
+  <joint name="LHandIndexLink1" type="revolute">
     <parent link="LHandLink"/>
     <child link="LHandIndex1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0425 0.078 -0.01"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandIndexLink2" type="fixed">
+  <joint name="LHandIndexLink2" type="revolute">
     <parent link="LHandIndex1Link"/>
     <child link="LHandIndex2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.035 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandIndexLink3" type="fixed">
+  <joint name="LHandIndexLink3" type="revolute">
     <parent link="LHandIndex2Link"/>
     <child link="LHandIndex3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.022 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandMiddleLink1" type="fixed">
+  <joint name="LHandMiddleLink1" type="revolute">
     <parent link="LHandLink"/>
     <child link="LHandMiddle1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.02 0.09 -0.01"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandMiddleLink2" type="fixed">
+  <joint name="LHandMiddleLink2" type="revolute">
     <parent link="LHandMiddle1Link"/>
     <child link="LHandMiddle2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.028 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandMiddleLink3" type="fixed">
+  <joint name="LHandMiddleLink3" type="revolute">
     <parent link="LHandMiddle2Link"/>
     <child link="LHandMiddle3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.025 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandRingLink1" type="fixed">
+  <joint name="LHandRingLink1" type="revolute">
     <parent link="LHandLink"/>
     <child link="LHandRing1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.001 0.085 -0.01"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandRingLink2" type="fixed">
+  <joint name="LHandRingLink2" type="revolute">
     <parent link="LHandRing1Link"/>
     <child link="LHandRing2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0225 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandRingLink3" type="fixed">
+  <joint name="LHandRingLink3" type="revolute">
     <parent link="LHandRing2Link"/>
     <child link="LHandRing3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.028 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandBabyLink1" type="fixed">
+  <joint name="LHandBabyLink1" type="revolute">
     <parent link="LHandLink"/>
     <child link="LHandBaby1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.015 0.079 -0.022"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandBabyLink2" type="fixed">
+  <joint name="LHandBabyLink2" type="revolute">
     <parent link="LHandBaby1Link"/>
     <child link="LHandBaby2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.02 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="LHandBabyLink3" type="fixed">
+  <joint name="LHandBabyLink3" type="revolute">
     <parent link="LHandBaby2Link"/>
     <child link="LHandBaby3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.02 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
 
   <!-- Right hand finger joints -->
-  <joint name="RHandThumbLink0" type="fixed">
+  <joint name="RHandThumbLink0" type="revolute">
     <parent link="RHandLink"/>
     <child link="RHandThumb0Link"/>
-    <origin rpy="0.0 0.2 -0.9" xyz="0.02 -0.016 -0.016"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.02 -0.016 -0.016"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandThumbLink1" type="fixed">
+  <joint name="RHandThumbLink1" type="revolute">
     <parent link="RHandThumb0Link"/>
     <child link="RHandThumb1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.045 0.0 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandThumbLink2" type="fixed">
+  <joint name="RHandThumbLink2" type="revolute">
     <parent link="RHandThumb1Link"/>
     <child link="RHandThumb2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.026 0.0 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandIndexLink1" type="fixed">
+  <joint name="RHandIndexLink1" type="revolute">
     <parent link="RHandLink"/>
     <child link="RHandIndex1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0425 -0.078 -0.01"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandIndexLink2" type="fixed">
+  <joint name="RHandIndexLink2" type="revolute">
     <parent link="RHandIndex1Link"/>
     <child link="RHandIndex2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.035 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandIndexLink3" type="fixed">
+  <joint name="RHandIndexLink3" type="revolute">
     <parent link="RHandIndex2Link"/>
     <child link="RHandIndex3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.022 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandMiddleLink1" type="fixed">
+  <joint name="RHandMiddleLink1" type="revolute">
     <parent link="RHandLink"/>
     <child link="RHandMiddle1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.02 -0.09 -0.01"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandMiddleLink2" type="fixed">
+  <joint name="RHandMiddleLink2" type="revolute">
     <parent link="RHandMiddle1Link"/>
     <child link="RHandMiddle2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.028 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandMiddleLink3" type="fixed">
+  <joint name="RHandMiddleLink3" type="revolute">
     <parent link="RHandMiddle2Link"/>
     <child link="RHandMiddle3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.025 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandRingLink1" type="fixed">
+  <joint name="RHandRingLink1" type="revolute">
     <parent link="RHandLink"/>
     <child link="RHandRing1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.001 -0.085 -0.01"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandRingLink2" type="fixed">
+  <joint name="RHandRingLink2" type="revolute">
     <parent link="RHandRing1Link"/>
     <child link="RHandRing2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0225 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandRingLink3" type="fixed">
+  <joint name="RHandRingLink3" type="revolute">
     <parent link="RHandRing2Link"/>
     <child link="RHandRing3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.028 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandBabyLink1" type="fixed">
+  <joint name="RHandBabyLink1" type="revolute">
     <parent link="RHandLink"/>
     <child link="RHandBaby1Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.015 -0.079 -0.022"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandBabyLink2" type="fixed">
+  <joint name="RHandBabyLink2" type="revolute">
     <parent link="RHandBaby1Link"/>
     <child link="RHandBaby2Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.02 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
-  <joint name="RHandBabyLink3" type="fixed">
+  <joint name="RHandBabyLink3" type="revolute">
     <parent link="RHandBaby2Link"/>
     <child link="RHandBaby3Link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.02 0.0"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="1" lower="0.0" upper="1.57" velocity="1"/>
   </joint>
 
 </robot>
