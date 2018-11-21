@@ -1,0 +1,12 @@
+<robot name="pepper">
+  <planar_surface name="RightSole" link="RAnkleLink">
+    <origin xyz="0 0 -0.1" rpy="0 0 0" />
+    <points>
+      <point xy="-0.08 0.05" />
+      <point xy="0.17 0.05" />
+      <point xy="0.17 -0.05" />
+      <point xy="-0.08 -0.05" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+</robot>
