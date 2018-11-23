@@ -350,6 +350,582 @@
     </collision>
   </link>
 
+    <!-- Left hand fingers links -->
+  <link name="LHandThumb0Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.019337 0.003385 -0.004077"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-9e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="1e-05" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LThumb0thPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LThumb0thPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandThumb1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.01028 0.001082 0.002081"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-4e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LThumb1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LThumb1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandThumb2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.016873 0.000626 -0.001112"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-4e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LThumb2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LThumb2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandIndex1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.001367 0.01696 0.001019"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-5e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="5e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LIndex1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LIndex1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandIndex2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000441 0.009184 0.000856"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LIndex2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LIndex2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandIndex3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.001129 0.010116 0.001347"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LIndex3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LIndex3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandMiddle1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000126 0.013279 0.000876"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LMiddle1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LMiddle1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandMiddle2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000232 0.010285 0.001535"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LMiddle2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LMiddle2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandMiddle3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000228 0.009327 0.001888"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LMiddle3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LMiddle3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandRing1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.001164 0.011568 -0.002292"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LRing1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LRing1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandRing2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000672 0.011883 0.001817"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LRing2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LRing2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandRing3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000957 0.007793 0.000943"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-1e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LRing3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LRing3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandBaby1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000982 0.009799 0.000912"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LBaby1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LBaby1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandBaby2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000602 0.009315 0.001953"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LBaby2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LBaby2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="LHandBaby3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.018741 0.030511 0.01986"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-1.9e-05" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2.5e-05" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LBaby3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/LBaby3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Right hand fingers links -->
+  <link name="RHandThumb0Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.019337 -0.003385 -0.004077"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-9e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="1e-05" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RThumb0thPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RThumb0thPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandThumb1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.01028 -0.001082 0.002081"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-4e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RThumb1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RThumb1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandThumb2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.016873 -0.000626 -0.001112"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-4e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RThumb2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RThumb2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandIndex1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.001367 -0.01696 0.001019"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-5e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="5e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RIndex1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RIndex1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandIndex2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000441 -0.009184 0.000856"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RIndex2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RIndex2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandIndex3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.001129 -0.010116 0.001347"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RIndex3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RIndex3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandMiddle1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000126 -0.013279 0.000876"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RMiddle1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RMiddle1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandMiddle2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000232 -0.010285 0.001535"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RMiddle2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RMiddle2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandMiddle3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000228 -0.009327 0.001888"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RMiddle3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RMiddle3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandRing1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.001164 -0.011568 -0.002292"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="4e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RRing1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RRing1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandRing2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000672 -0.011883 0.001817"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-3e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RRing2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RRing2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandRing3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000957 -0.007793 0.000943"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-1e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RRing3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RRing3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandBaby1Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000982 -0.009799 0.000912"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="3e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RBaby1stPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RBaby1stPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandBaby2Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000602 -0.009315 0.001953"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-2e-06" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2e-06" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RBaby2ndPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RBaby2ndPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="RHandBaby3Link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.018741 -0.030511 0.01986"/>
+      <mass value="0.0182"/>
+      <inertia ixx="-1.9e-05" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="2.5e-05" izz="0.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RBaby3rdPhalange.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://human_description/meshes/RBaby3rdPhalange.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+ 
+
   <!-- Joints -->
 
   <!-- Hips to Torso : spherical -->
@@ -862,5 +1438,160 @@
     <axis xyz="0 1 0"/>
     <limit effort="1" lower="-0.78" upper="1.3" velocity="1"/>
   </joint>
+
+    <!-- Left hand finger joints -->
+  <joint name="LHandThumbLink1" type="fixed">
+    <parent link="LHandLink"/>
+    <child link="LHandThumb0Link"/>
+    <origin rpy="0.0 0.2 0.9" xyz="0.02 0.016 -0.016"/>
+  </joint>
+  <joint name="LHandThumbLink2" type="fixed">
+    <parent link="LHandThumb0Link"/>
+    <child link="LHandThumb1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.045 0.0 0.0"/>
+  </joint>
+  <joint name="LHandThumbLink3" type="fixed">
+    <parent link="LHandThumb1Link"/>
+    <child link="LHandThumb2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.026 0.0 0.0"/>
+  </joint>
+  <joint name="LHandIndexLink1" type="fixed">
+    <parent link="LHandLink"/>
+    <child link="LHandIndex1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0425 0.078 -0.01"/>
+  </joint>
+  <joint name="LHandIndexLink2" type="fixed">
+    <parent link="LHandIndex1Link"/>
+    <child link="LHandIndex2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.035 0.0"/>
+  </joint>
+  <joint name="LHandIndexLink3" type="fixed">
+    <parent link="LHandIndex2Link"/>
+    <child link="LHandIndex3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.022 0.0"/>
+  </joint>
+  <joint name="LHandMiddleLink1" type="fixed">
+    <parent link="LHandLink"/>
+    <child link="LHandMiddle1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.02 0.09 -0.01"/>
+  </joint>
+  <joint name="LHandMiddleLink2" type="fixed">
+    <parent link="LHandMiddle1Link"/>
+    <child link="LHandMiddle2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.028 0.0"/>
+  </joint>
+  <joint name="LHandMiddleLink3" type="fixed">
+    <parent link="LHandMiddle2Link"/>
+    <child link="LHandMiddle3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.025 0.0"/>
+  </joint>
+  <joint name="LHandRingLink1" type="fixed">
+    <parent link="LHandLink"/>
+    <child link="LHandRing1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.001 0.085 -0.01"/>
+  </joint>
+  <joint name="LHandRingLink2" type="fixed">
+    <parent link="LHandRing1Link"/>
+    <child link="LHandRing2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0225 0.0"/>
+  </joint>
+  <joint name="LHandRingLink3" type="fixed">
+    <parent link="LHandRing2Link"/>
+    <child link="LHandRing3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.028 0.0"/>
+  </joint>
+  <joint name="LHandBabyLink1" type="fixed">
+    <parent link="LHandLink"/>
+    <child link="LHandBaby1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.015 0.079 -0.022"/>
+  </joint>
+  <joint name="LHandBabyLink2" type="fixed">
+    <parent link="LHandBaby1Link"/>
+    <child link="LHandBaby2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.02 0.0"/>
+  </joint>
+  <joint name="LHandBabyLink3" type="fixed">
+    <parent link="LHandBaby2Link"/>
+    <child link="LHandBaby3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.02 0.0"/>
+  </joint>
+
+  <!-- Right hand finger joints -->
+  <joint name="RHandThumbLink0" type="fixed">
+    <parent link="RHandLink"/>
+    <child link="RHandThumb0Link"/>
+    <origin rpy="0.0 0.2 -0.9" xyz="0.02 -0.016 -0.016"/>
+  </joint>
+  <joint name="RHandThumbLink1" type="fixed">
+    <parent link="RHandThumb0Link"/>
+    <child link="RHandThumb1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.045 0.0 0.0"/>
+  </joint>
+  <joint name="RHandThumbLink2" type="fixed">
+    <parent link="RHandThumb1Link"/>
+    <child link="RHandThumb2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.026 0.0 0.0"/>
+  </joint>
+  <joint name="RHandIndexLink1" type="fixed">
+    <parent link="RHandLink"/>
+    <child link="RHandIndex1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0425 -0.078 -0.01"/>
+  </joint>
+  <joint name="RHandIndexLink2" type="fixed">
+    <parent link="RHandIndex1Link"/>
+    <child link="RHandIndex2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.035 0.0"/>
+  </joint>
+  <joint name="RHandIndexLink3" type="fixed">
+    <parent link="RHandIndex2Link"/>
+    <child link="RHandIndex3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.022 0.0"/>
+  </joint>
+  <joint name="RHandMiddleLink1" type="fixed">
+    <parent link="RHandLink"/>
+    <child link="RHandMiddle1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.02 -0.09 -0.01"/>
+  </joint>
+  <joint name="RHandMiddleLink2" type="fixed">
+    <parent link="RHandMiddle1Link"/>
+    <child link="RHandMiddle2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.028 0.0"/>
+  </joint>
+  <joint name="RHandMiddleLink3" type="fixed">
+    <parent link="RHandMiddle2Link"/>
+    <child link="RHandMiddle3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.025 0.0"/>
+  </joint>
+  <joint name="RHandRingLink1" type="fixed">
+    <parent link="RHandLink"/>
+    <child link="RHandRing1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.001 -0.085 -0.01"/>
+  </joint>
+  <joint name="RHandRingLink2" type="fixed">
+    <parent link="RHandRing1Link"/>
+    <child link="RHandRing2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.0225 0.0"/>
+  </joint>
+  <joint name="RHandRingLink3" type="fixed">
+    <parent link="RHandRing2Link"/>
+    <child link="RHandRing3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.028 0.0"/>
+  </joint>
+  <joint name="RHandBabyLink1" type="fixed">
+    <parent link="RHandLink"/>
+    <child link="RHandBaby1Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.015 -0.079 -0.022"/>
+  </joint>
+  <joint name="RHandBabyLink2" type="fixed">
+    <parent link="RHandBaby1Link"/>
+    <child link="RHandBaby2Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.02 0.0"/>
+  </joint>
+  <joint name="RHandBabyLink3" type="fixed">
+    <parent link="RHandBaby2Link"/>
+    <child link="RHandBaby3Link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.02 0.0"/>
+  </joint>
+
 
 </robot>
