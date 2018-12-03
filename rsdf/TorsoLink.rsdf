@@ -1,0 +1,12 @@
+<robot name="pepper">
+  <planar_surface name="Back" link="TorsoLink">
+    <origin xyz="-0.11 0 0.21" rpy="0 1.57 0" />
+    <points>
+      <point xy="-0.2 0.17" />
+      <point xy="0.2 0.1" />
+      <point xy="0.2 -0.1" />
+      <point xy="-0.2 -0.17" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+</robot>

@@ -355,7 +355,7 @@
   <!-- Hips to Torso : spherical -->
   <link name="hip2torso_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -373,7 +373,7 @@
 
   <link name="hip2torso_2">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -394,7 +394,7 @@
     <child link="hip2torso_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-0.65" upper="0.65" velocity="1"/>
+    <limit effort="100" lower="-0.65" upper="0.65" velocity="100"/>
   </joint>
 
   <joint name="Torso_1" type="revolute">
@@ -402,7 +402,7 @@
     <child link="hip2torso_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-0.55" upper="2.9" velocity="1"/>
+    <limit effort="100" lower="-0.55" upper="2.9" velocity="100"/>
   </joint>
 
   <joint name="Torso_2" type="revolute">
@@ -410,13 +410,13 @@
     <child link="TorsoLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-0.7" upper="0.7" velocity="1"/>
+    <limit effort="100" lower="-0.7" upper="0.7" velocity="100"/>
   </joint>
 
   <!-- Torso to Head : spherical -->
   <link name="torso2head_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.005 0.005 0.005"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.05"/>
       <inertia ixx="0.000002" ixy="0.0" ixz="0.0" iyy="0.000002" iyz="0.0" izz="0.000002"/>
     </inertial>
@@ -434,7 +434,7 @@
 
   <link name="torso2head_2">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.005 0.005 0.005"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.05"/>
       <inertia ixx="0.000002" ixy="0.0" ixz="0.0" iyy="0.000002" iyz="0.0" izz="0.000002"/>
     </inertial>
@@ -455,7 +455,7 @@
     <child link="torso2head_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.025 0.0 0.525"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-0.62" upper="0.62" velocity="1"/>
+    <limit effort="100" lower="-0.62" upper="0.62" velocity="100"/>
   </joint>
 
   <joint name="Head_1" type="revolute">
@@ -463,7 +463,7 @@
     <child link="torso2head_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-0.45" upper="0.45" velocity="1"/>
+    <limit effort="100" lower="-0.45" upper="0.45" velocity="100"/>
   </joint>
 
   <joint name="Head_2" type="revolute">
@@ -471,13 +471,13 @@
     <child link="HeadLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-1.1" upper="1.1" velocity="1"/>
+    <limit effort="100" lower="-1.1" upper="1.1" velocity="100"/>
   </joint>
 
   <!-- Torso to left Shoulder : spherical -->
   <link name="torso2lshoulder_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -495,7 +495,7 @@
 
   <link name="torso2lshoulder_2">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -516,7 +516,7 @@
     <child link="torso2lshoulder_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.05 0.15 0.35"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-1.42" upper="1.57" velocity="1"/>
+    <limit effort="100" lower="-1.42" upper="1.57" velocity="100"/>
   </joint>
 
   <joint name="LArm_1" type="revolute">
@@ -524,7 +524,7 @@
     <child link="torso2lshoulder_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-1.2" upper="1.2" velocity="1"/>
+    <limit effort="100" lower="-1.2" upper="1.2" velocity="100"/>
   </joint>
 
   <joint name="LArm_2" type="revolute">
@@ -532,7 +532,7 @@
     <child link="LArmLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-2.25" upper="0.78" velocity="1"/>
+    <limit effort="100" lower="-2.25" upper="0.78" velocity="100"/>
   </joint>
 
 
@@ -541,7 +541,7 @@
     <child link="LElbowLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.2 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-1.57" upper="1.0" velocity="1"/>
+    <limit effort="100" lower="-1.57" upper="1.0" velocity="100"/>
   </joint>
 
 
@@ -550,14 +550,14 @@
     <child link="LForearmLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.01 0.05 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-2.5" upper="0.0" velocity="1"/>
+    <limit effort="100" lower="-2.5" upper="0.0" velocity="100"/>
   </joint>
 
 
   <!-- Forearm to left Wrist connection-->
   <link name="forearm2lwrist_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.005 0.005 0.005"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.05"/>
       <inertia ixx="0.000002" ixy="0.0" ixz="0.0" iyy="0.000002" iyz="0.0" izz="0.000002"/>
     </inertial>
@@ -578,7 +578,7 @@
     <child link="forearm2lwrist_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.01 0.24 -0.01"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-1.5" upper="1.5" velocity="1"/>
+    <limit effort="100" lower="-1.5" upper="1.5" velocity="100"/>
   </joint>
 
   <joint name="LWrist_1" type="revolute">
@@ -586,14 +586,14 @@
     <child link="LHandLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-0.35" upper="0.35" velocity="1"/>
+    <limit effort="100" lower="-0.35" upper="0.35" velocity="100"/>
   </joint>
 
 
   <!-- Torso to right Shoulder : spherical -->
   <link name="torso2rshoulder_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -611,7 +611,7 @@
 
   <link name="torso2rshoulder_2">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -632,7 +632,7 @@
     <child link="torso2rshoulder_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.05 -0.15 0.35"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-1.42" upper="1.57" velocity="1"/>
+    <limit effort="100" lower="-1.42" upper="1.57" velocity="100"/>
   </joint>
 
   <joint name="RArm_1" type="revolute">
@@ -640,7 +640,7 @@
     <child link="torso2rshoulder_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-1.2" upper="1.2" velocity="1"/>
+    <limit effort="100" lower="-1.2" upper="1.2" velocity="100"/>
   </joint>
 
   <joint name="RArm_2" type="revolute">
@@ -648,7 +648,7 @@
     <child link="RArmLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-2.25" upper="0.78" velocity="1"/>
+    <limit effort="100" lower="-2.25" upper="0.78" velocity="100"/>
   </joint>
 
 
@@ -657,7 +657,7 @@
     <child link="RElbowLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.2 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-1.57" upper="1.0" velocity="1"/>
+    <limit effort="100" lower="-1.57" upper="1.0" velocity="100"/>
   </joint>
 
 
@@ -666,14 +666,14 @@
     <child link="RForearmLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.01 -0.05 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-2.5" upper="0.0" velocity="1"/>
+    <limit effort="100" lower="0.0" upper="2.5" velocity="100"/>
   </joint>
 
 
   <!-- Forearm to right Wrist connection-->
   <link name="forearm2rwrist_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.005 0.005 0.005"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.05"/>
       <inertia ixx="0.000002" ixy="0.0" ixz="0.0" iyy="0.000002" iyz="0.0" izz="0.000002"/>
     </inertial>
@@ -694,7 +694,7 @@
     <child link="forearm2rwrist_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.01 -0.24 -0.01"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-1.5" upper="1.5" velocity="1"/>
+    <limit effort="100" lower="-1.5" upper="1.5" velocity="100"/>
   </joint>
 
   <joint name="RWrist_1" type="revolute">
@@ -702,14 +702,14 @@
     <child link="RHandLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-0.35" upper="0.35" velocity="1"/>
+    <limit effort="100" lower="-0.35" upper="0.35" velocity="100"/>
   </joint>
 
 
   <!-- Torso to left Leg : spherical -->
   <link name="torso2lleg_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -727,7 +727,7 @@
 
   <link name="torso2lleg_2">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -748,7 +748,7 @@
     <child link="torso2lleg_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.1 -0.15"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-0.52" upper="0.87" velocity="1"/>
+    <limit effort="100" lower="-0.52" upper="0.87" velocity="100"/>
   </joint>
 
   <joint name="LLeg_1" type="revolute">
@@ -756,7 +756,7 @@
     <child link="torso2lleg_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-2.3" upper="0.52" velocity="1"/>
+    <limit effort="100" lower="-2.3" upper="0.52" velocity="100"/>
   </joint>
 
   <joint name="LLeg_2" type="revolute">
@@ -764,7 +764,7 @@
     <child link="LLegLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-0.8" upper="0.8" velocity="1"/>
+    <limit effort="100" lower="-0.8" upper="0.8" velocity="100"/>
   </joint>
 
 
@@ -773,22 +773,49 @@
     <child link="LShinLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.025 0.0 -0.35"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="0.0" upper="2.6" velocity="1"/>
+    <limit effort="100" lower="0.0" upper="2.6" velocity="100"/>
   </joint>
+
+  <!-- Shin to left Ankle : 2DoF -->
+  <link name="shin2lankle_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
 
   <joint name="LAnkle_0" type="revolute">
     <parent link="LShinLink"/>
-    <child link="LAnkleLink"/>
+    <child link="shin2lankle_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.025 0.0 -0.375"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-0.78" upper="1.3" velocity="1"/>
+    <limit effort="100" lower="-0.78" upper="1.3" velocity="100"/>
+  </joint>
+
+  <joint name="LAnkle_1" type="revolute">
+    <parent link="shin2lankle_1"/>
+    <child link="LAnkleLink"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100" lower="-0.5" upper="0.5" velocity="100"/>
   </joint>
 
 
   <!-- Torso to right Leg : spherical -->
   <link name="torso2rleg_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -806,7 +833,7 @@
 
   <link name="torso2rleg_2">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.01 0.01 0.01"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.2"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
     </inertial>
@@ -827,7 +854,7 @@
     <child link="torso2rleg_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.0 -0.1 -0.15"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" lower="-0.87" upper="0.52" velocity="1"/>
+    <limit effort="100" lower="-0.87" upper="0.52" velocity="100"/>
   </joint>
 
   <joint name="RLeg_1" type="revolute">
@@ -835,7 +862,7 @@
     <child link="torso2rleg_2"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-2.3" upper="0.52" velocity="1"/>
+    <limit effort="100" lower="-2.3" upper="0.52" velocity="100"/>
   </joint>
 
   <joint name="RLeg_2" type="revolute">
@@ -843,7 +870,7 @@
     <child link="RLegLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" lower="-0.8" upper="0.8" velocity="1"/>
+    <limit effort="100" lower="-0.8" upper="0.8" velocity="100"/>
   </joint>
 
 
@@ -852,15 +879,42 @@
     <child link="RShinLink"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.025 0.0 -0.35"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="0.0" upper="2.6" velocity="1"/>
+    <limit effort="100" lower="0.0" upper="2.6" velocity="100"/>
   </joint>
+
+  <!-- Shin to right Ankle : 2DoF -->
+  <link name="shin2rankle_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.0000032" ixy="0.0" ixz="0.0" iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
 
   <joint name="RAnkle_0" type="revolute">
     <parent link="RShinLink"/>
-    <child link="RAnkleLink"/>
+    <child link="shin2rankle_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.025 0.0 -0.375"/>
     <axis xyz="0 1 0"/>
-    <limit effort="1" lower="-0.78" upper="1.3" velocity="1"/>
+    <limit effort="100" lower="-0.78" upper="1.3" velocity="100"/>
+  </joint>
+
+  <joint name="RAnkle_1" type="revolute">
+    <parent link="shin2rankle_1"/>
+    <child link="RAnkleLink"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100" lower="-0.5" upper="0.5" velocity="100"/>
   </joint>
 
 </robot>
