@@ -1,5 +1,5 @@
 <robot name="pepper">
-  <planar_surface name="LeftFoot" link="LAnkleLink">
+  <planar_surface name="LeftSole" link="LAnkleLink">
     <origin xyz="0 0 -0.1" rpy="0 0 0" />
     <points>
       <point xy="-0.08 0.05" />
