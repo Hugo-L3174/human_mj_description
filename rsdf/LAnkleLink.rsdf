@@ -1,4 +1,4 @@
-<robot name="pepper">
+<robot name="human">
   <planar_surface name="LeftSole" link="LAnkleLink">
     <origin xyz="0 0 -0.1" rpy="0 0 0" />
     <points>

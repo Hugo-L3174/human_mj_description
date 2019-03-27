@@ -1,4 +1,4 @@
-<robot name="pepper">
+<robot name="human">
   <planar_surface name="LLegBack" link="LLegLink">
     <origin xyz="-0.12 0 -0.12" rpy="0 1.57 0" />
     <points>
