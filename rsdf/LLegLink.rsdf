@@ -1,6 +1,6 @@
 <robot name="human">
   <planar_surface name="LLegBack" link="LLegLink">
-    <origin xyz="-0.12 0 -0.12" rpy="0 1.57 0" />
+    <origin xyz="-0.12 0 -0.12" rpy="0 1.570796 0" />
     <points>
       <point xy="-0.1 0.08" />
       <point xy="0.17 0.07" />
