@@ -1,5 +1,11 @@
 <?xml version="1.0" ?>
 <robot name="HUMAN" xmlns:xacro="http://ros.org/wiki/xacro">
+   <mujoco>
+        <compiler 
+        meshdir="../meshes/stl" 
+        balanceinertia="true" 
+        discardvisual="false" />
+  </mujoco>
 
   <link name="base_link"/>
 
@@ -19,13 +25,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/HipsLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/HipsLinkFull.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/HipsLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/HipsLinkFull.stl"/>
       </geometry>
     </collision>
   </link>
@@ -39,13 +45,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/TorsoLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/TorsoLinkFull.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/TorsoLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/TorsoLinkFull.stl"/>
       </geometry>
     </collision>
   </link>
@@ -59,13 +65,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/HeadLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/HeadLinkFull.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/HeadLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/HeadLinkFull.stl"/>
       </geometry>
     </collision>
   </link>
@@ -79,13 +85,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LArmLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/LArmLinkFull.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LArmLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/LArmLinkFull.stl"/>
       </geometry>
     </collision>
   </link>
@@ -99,13 +105,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LElbowLink.dae"/>
+        <mesh filename="package://human_description/meshes/LElbowLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LElbowLink.dae"/>
+        <mesh filename="package://human_description/meshes/LElbowLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -119,13 +125,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LForearmLink.dae"/>
+        <mesh filename="package://human_description/meshes/LForearmLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LForearmLink.dae"/>
+        <mesh filename="package://human_description/meshes/LForearmLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -139,13 +145,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LWrist.dae"/>
+        <mesh filename="package://human_description/meshes/LWrist.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LWrist.dae"/>
+        <mesh filename="package://human_description/meshes/LWrist.stl"/>
       </geometry>
     </collision>
   </link>
@@ -159,13 +165,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RArmLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/RArmLinkFull.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RArmLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/RArmLinkFull.stl"/>
       </geometry>
     </collision>
   </link>
@@ -179,13 +185,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RElbowLink.dae"/>
+        <mesh filename="package://human_description/meshes/RElbowLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RElbowLink.dae"/>
+        <mesh filename="package://human_description/meshes/RElbowLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -199,13 +205,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RForearmLink.dae"/>
+        <mesh filename="package://human_description/meshes/RForearmLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RForearmLink.dae"/>
+        <mesh filename="package://human_description/meshes/RForearmLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -219,13 +225,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RWrist.dae"/>
+        <mesh filename="package://human_description/meshes/RWrist.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RWrist.dae"/>
+        <mesh filename="package://human_description/meshes/RWrist.stl"/>
       </geometry>
     </collision>
   </link>
@@ -239,13 +245,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LLegLink.dae"/>
+        <mesh filename="package://human_description/meshes/LLegLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LLegLink.dae"/>
+        <mesh filename="package://human_description/meshes/LLegLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -259,13 +265,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LShinLink.dae"/>
+        <mesh filename="package://human_description/meshes/LShinLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LShinLink.dae"/>
+        <mesh filename="package://human_description/meshes/LShinLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -279,13 +285,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LAnkleLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/LAnkleLinkFull.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LAnkleLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/LAnkleLinkFull.stl"/>
       </geometry>
     </collision>
   </link>
@@ -299,13 +305,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RLegLink.dae"/>
+        <mesh filename="package://human_description/meshes/RLegLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RLegLink.dae"/>
+        <mesh filename="package://human_description/meshes/RLegLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -319,13 +325,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RShinLink.dae"/>
+        <mesh filename="package://human_description/meshes/RShinLink.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RShinLink.dae"/>
+        <mesh filename="package://human_description/meshes/RShinLink.stl"/>
       </geometry>
     </collision>
   </link>
@@ -339,13 +345,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RAnkleLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/RAnkleLinkFull.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RAnkleLinkFull.dae"/>
+        <mesh filename="package://human_description/meshes/RAnkleLinkFull.stl"/>
       </geometry>
     </collision>
   </link>
@@ -767,13 +773,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LThumb0thPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LThumb0thPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LThumb0thPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LThumb0thPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -786,13 +792,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LThumb1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LThumb1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LThumb1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LThumb1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -805,13 +811,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LThumb2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LThumb2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LThumb2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LThumb2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -824,13 +830,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LIndex1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LIndex1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LIndex1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LIndex1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -843,13 +849,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LIndex2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LIndex2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LIndex2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LIndex2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -862,13 +868,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LIndex3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LIndex3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LIndex3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LIndex3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -881,13 +887,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LMiddle1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LMiddle1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LMiddle1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LMiddle1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -900,13 +906,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LMiddle2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LMiddle2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LMiddle2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LMiddle2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -919,13 +925,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LMiddle3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LMiddle3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LMiddle3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LMiddle3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -938,13 +944,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LRing1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LRing1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LRing1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LRing1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -957,13 +963,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LRing2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LRing2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LRing2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LRing2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -976,13 +982,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LRing3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LRing3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LRing3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LRing3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -995,13 +1001,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LBaby1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LBaby1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LBaby1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LBaby1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1014,13 +1020,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LBaby2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LBaby2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LBaby2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LBaby2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1033,13 +1039,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LBaby3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LBaby3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/LBaby3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/LBaby3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1054,13 +1060,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RThumb0thPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RThumb0thPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RThumb0thPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RThumb0thPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1073,13 +1079,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RThumb1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RThumb1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RThumb1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RThumb1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1092,13 +1098,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RThumb2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RThumb2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RThumb2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RThumb2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1111,13 +1117,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RIndex1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RIndex1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RIndex1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RIndex1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1130,13 +1136,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RIndex2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RIndex2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RIndex2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RIndex2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1149,13 +1155,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RIndex3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RIndex3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RIndex3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RIndex3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1168,13 +1174,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RMiddle1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RMiddle1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RMiddle1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RMiddle1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1187,13 +1193,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RMiddle2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RMiddle2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RMiddle2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RMiddle2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1206,13 +1212,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RMiddle3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RMiddle3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RMiddle3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RMiddle3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1225,13 +1231,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RRing1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RRing1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RRing1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RRing1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1244,13 +1250,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RRing2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RRing2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RRing2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RRing2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1263,13 +1269,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RRing3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RRing3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RRing3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RRing3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1282,13 +1288,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RBaby1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RBaby1stPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RBaby1stPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RBaby1stPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1301,13 +1307,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RBaby2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RBaby2ndPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RBaby2ndPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RBaby2ndPhalange.stl"/>
       </geometry>
     </collision>
   </link>
@@ -1320,13 +1326,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RBaby3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RBaby3rdPhalange.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://human_description/meshes/RBaby3rdPhalange.dae"/>
+        <mesh filename="package://human_description/meshes/RBaby3rdPhalange.stl"/>
       </geometry>
     </collision>
   </link>
