@@ -1,51 +1,26 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(human_description)
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS xacro)
+if(NOT TARGET mc_mujoco)
+  find_package(mc_mujoco REQUIRED)
+endif()
 
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+option(SRC_MODE "Use files in the repository instead of installed files" OFF)
 
-catkin_package(
-    SKIP_PKG_CONFIG_GENERATION
-    CATKIN_DEPENDS xacro mc_rbdyn_urdf
-)
+set(HUMAN_XML_MODEL_PATH "xml/human.xml")
+set(HUMAN_PDGAINS_PATH "pdgains/PDgains_sim.dat")
 
-# Configure the develspace pkg-config file
-set(DATADIR "${PROJECT_SOURCE_DIR}")
-configure_file(
-  "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}.pc.cmake"
-  "${CATKIN_DEVEL_PREFIX}/lib/pkgconfig/${PROJECT_NAME}.pc")
+if(SRC_MODE)
+  set(HUMAN_XML_MODEL_PATH "${CMAKE_CURRENT_SOURCE_DIR}/${HUMAN_XML_MODEL_PATH}")
+  set(HUMAN_PDGAINS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/${HUMAN_PDGAINS_PATH}")
+else()
+  set(HUMAN_XML_MODEL_PATH "${MC_MUJOCO_SHARE_DESTINATION}/HUMAN/${HUMAN_XML_MODEL_PATH}")
+  set(HUMAN_PDGAINS_PATH "${MC_MUJOCO_SHARE_DESTINATION}/HUMAN/${HUMAN_PDGAINS_PATH}")
+endif()
 
-# Configure the installspace pkg-config file
-set(DATADIR "${CMAKE_INSTALL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}")
-file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/installspace)
-configure_file(
-  "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}.pc.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/installspace/${PROJECT_NAME}.pc")
-install(
-  FILES ${CMAKE_CURRENT_BINARY_DIR}/catkin_generated/installspace/${PROJECT_NAME}.pc
-  DESTINATION lib/pkgconfig)
+configure_file(mc_mujoco/human.in.yaml "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/human.yaml")
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/human.yaml" DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}")
 
-# Generate URDF models???
-
-
-catkin_python_setup()
-
-# Instructions to install launch files
-install(DIRECTORY launch/
-     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
-
-# Instructions to install config files
-install(DIRECTORY config/
-     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config)
-
-# Instructions to install launch files
-install(DIRECTORY urdf/
-     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf)
-
-install(DIRECTORY meshes/
-	DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes)
+install(DIRECTORY meshes DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/HUMAN" FILES_MATCHING PATTERN "*.stl")
+install(DIRECTORY pdgains DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/HUMAN" FILES_MATCHING PATTERN "*.dat")
+install(DIRECTORY xml DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/HUMAN" FILES_MATCHING PATTERN "*.xml")
