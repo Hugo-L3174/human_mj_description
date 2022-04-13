@@ -51,10 +51,26 @@
         <mesh name="RBaby2ndPhalange" file="RBaby2ndPhalange.stl" />
         <mesh name="RBaby3rdPhalange" file="RBaby3rdPhalange.stl" />
     </asset>
+
+    <contact>
+        <exclude body1="base_link" body2="TorsoLink" />
+        <exclude body1="base_link" body2="LLegLink" />
+        <exclude body1="base_link" body2="RLegLink" />
+        <exclude body1="TorsoLink" body2="HeadLink" />
+        <exclude body1="TorsoLink" body2="LArmLink" />
+        <exclude body1="TorsoLink" body2="RArmLink" />
+        <exclude body1="LArmLink" body2="LForearmLink" />
+        <exclude body1="LForearmLink" body2="LHandLink" />
+        <exclude body1="RArmLink" body2="RForearmLink" />
+        <exclude body1="RForearmLink" body2="RHandLink" />
+        <exclude body1="LShinLink" body2="LAnkleLink" />
+        <exclude body1="RShinLink" body2="RAnkleLink" />
+    </contact>
+
     <worldbody>
         <light directional="false" diffuse="0.2 0.2 0.2" specular="0 0 0" pos="0 0 2" dir="0 0 -1" castshadow="false" />
         <body name="base_link" pos="0 0 1">
-            <!-- <freejoint name="root" /> -->
+            <freejoint name="root" />
             <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HipsLinkFull" />
             <geom type="mesh" mesh="HipsLinkFull" />
             <body name="hip2torso_1" pos="0 0 0">
