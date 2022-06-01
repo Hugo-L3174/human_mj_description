@@ -423,4 +423,47 @@
             </body>
         </body>
     </worldbody>
+
+    <actuator>
+        <!-- right leg -->
+        <motor name="RLeg_0_motor" joint="RLeg_0" />
+        <motor name="RLeg_1_motor" joint="RLeg_1" />
+        <motor name="RLeg_2_motor" joint="RLeg_2" />
+        <motor name="RShin_0_motor" joint="RShin_0" />
+        <motor name="RAnkle_0_motor" joint="RAnkle_0" />
+        <motor name="RAnkle_1_motor" joint="RAnkle_1" />
+        <!-- left leg -->
+        <motor name="LLeg_0_motor" joint="LLeg_0" />
+        <motor name="LLeg_1_motor" joint="LLeg_1" />
+        <motor name="LLeg_2_motor" joint="LLeg_2" />
+        <motor name="LShin_0_motor" joint="LShin_0" />
+        <motor name="LAnkle_0_motor" joint="LAnkle_0" />
+        <motor name="LAnkle_1_motor" joint="LAnkle_1" />
+        <!-- chest-->
+        <motor name="Torso_0_motor" joint="Torso_0" />
+        <motor name="Torso_1_motor" joint="Torso_1" />
+        <motor name="Torso_2_motor" joint="Torso_2" />
+        <!-- head -->
+        <motor name="Head_0_motor" joint="Head_0" />
+        <motor name="Head_1_motor" joint="Head_1" />
+        <motor name="Head_2_motor" joint="Head_2" />
+        <!-- right arm -->
+        <motor name="RArm_0_motor" joint="RArm_0" />
+        <motor name="RArm_1_motor" joint="RArm_1" />
+        <motor name="RArm_2_motor" joint="RArm_2" />
+        <motor name="RElbow_motor" joint="RElbow" />
+        <motor name="RForearm_motor" joint="RForearm" />
+        <motor name="RWrist_0_motor" joint="RWrist_0" />
+        <motor name="RWrist_1_motor" joint="RWrist_1" />
+        <motor name="RHand_motor" joint="RHand" />
+        <!-- left arm -->
+        <motor name="LArm_0_motor" joint="LArm_0" />
+        <motor name="LArm_1_motor" joint="LArm_1" />
+        <motor name="LArm_2_motor" joint="LArm_2" />
+        <motor name="LElbow_motor" joint="LElbow" />
+        <motor name="LForearm_motor" joint="LForearm" />
+        <motor name="LWrist_0_motor" joint="LWrist_0" />
+        <motor name="LWrist_1_motor" joint="LWrist_1" />
+        <motor name="LHand_motor" joint="LHand" />
+    </actuator>
 </mujoco>
