@@ -73,6 +73,8 @@
             <freejoint name="root" />
             <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HipsLinkFull" />
             <geom type="mesh" mesh="HipsLinkFull" />
+            <!-- site for root imu sensor -->
+	        <site name="Gyro" size="0.01" pos=" 0 0 0" />
             <body name="hip2torso_1" pos="0 0 0">
                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                 <joint name="Torso_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.65 0.65" armature="0.08943" />
@@ -466,4 +468,10 @@
         <motor name="LWrist_1_motor" joint="LWrist_1" />
         <motor name="LHand_motor" joint="LHand" />
     </actuator>
+
+    <sensor>
+        <!-- imu -->
+        <gyro name="Accelerometer_gyro" site="Gyro" />
+        <accelerometer name="Accelerometer_accelerometer" site="Gyro" />
+    </sensor>
 </mujoco>
