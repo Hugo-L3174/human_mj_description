@@ -1,24 +1,25 @@
 <mujoco model="HUMAN">
     <compiler angle="radian" meshdir="../meshes/stl/" />
     <size njmax="500" nconmax="100" />
+    <!-- <option gravity="0 0 0"/> -->
     <asset>
         <texture type='skybox' builtin='gradient' width='128' height='128' rgb1='0.4 0.6 0.8' rgb2='0 0 0'/>
-        <mesh name="HipsLinkFull" file="HipsLinkFull.stl" />
-        <mesh name="TorsoLinkFull" file="TorsoLinkFull.stl" />
+        <mesh name="HipsLinkFull" file="HipsLinkFull.stl" scale=" 1 1 0.8"/> <!-- scale=" 1 1 0.86" for louise-->
+        <mesh name="TorsoLinkFull" file="TorsoLinkFull.stl" scale=" 1 1 0.9"/>
         <mesh name="HeadLinkFull" file="HeadLinkFull.stl" />
-        <mesh name="LArmLinkFull" file="LArmLinkFull.stl" />
+        <mesh name="LArmLinkFull" file="LArmLinkFull.stl" scale=" 1 1 1"/> <!-- scale=" 1 1.25 1" for louise-->
         <mesh name="LElbowLink" file="LElbowLink.stl" />
-        <mesh name="LForearmLink" file="LForearmLink.stl" />
+        <mesh name="LForearmLink" file="LForearmLink.stl" scale=" 1 0.875 1"/>
         <mesh name="LWrist" file="LWrist.stl" />
-        <mesh name="RArmLinkFull" file="RArmLinkFull.stl" />
+        <mesh name="RArmLinkFull" file="RArmLinkFull.stl" scale=" 1 1 1"/>
         <mesh name="RElbowLink" file="RElbowLink.stl" />
-        <mesh name="RForearmLink" file="RForearmLink.stl" />
+        <mesh name="RForearmLink" file="RForearmLink.stl" scale=" 1 0.875 1"/>
         <mesh name="RWrist" file="RWrist.stl" />
-        <mesh name="LLegLink" file="LLegLink.stl" />
-        <mesh name="LShinLink" file="LShinLink.stl" />
+        <mesh name="LLegLink" file="LLegLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.14" for louise-->
+        <mesh name="LShinLink" file="LShinLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.147" for louise-->
         <mesh name="LAnkleLinkFull" file="LAnkleLinkFull.stl" />
-        <mesh name="RLegLink" file="RLegLink.stl" />
-        <mesh name="RShinLink" file="RShinLink.stl" />
+        <mesh name="RLegLink" file="RLegLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.14" for louise-->
+        <mesh name="RShinLink" file="RShinLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.147" for louise-->
         <mesh name="RAnkleLinkFull" file="RAnkleLinkFull.stl" />
         <mesh name="LThumb0thPhalange" file="LThumb0thPhalange.stl" />
         <mesh name="LThumb1stPhalange" file="LThumb1stPhalange.stl" />
@@ -86,7 +87,7 @@
                         <joint name="Torso_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.7 0.7" armature="2.5423" />
                         <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="TorsoLinkFull" />
                         <geom type="mesh" mesh="TorsoLinkFull" />
-                        <body name="torso2head_1" pos="-0.025 0 0.525">
+                        <body name="torso2head_1" pos="-0.025 0 0.46"> <!-- pos="-0.025 0 0.525" -->
                             <inertial pos="0 0 0" mass="0.05" diaginertia="2e-06 2e-06 2e-06" />
                             <joint name="Head_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.62 0.62" armature="0.5"/>
                             <body name="torso2head_2" pos="0 0 0">
@@ -100,9 +101,9 @@
                                 </body>
                             </body>
                         </body>
-                        <body name="torso2lshoulder_1" pos="-0.05 0.15 0.35">
+                        <body name="torso2lshoulder_1" pos="-0.05 0.15 0.30">
                             <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
-                            <joint name="LArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="1.553"/>
+                            <joint name="LArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="0.553"/>
                             <body name="torso2lshoulder_2" pos="0 0 0">
                                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                                 <joint name="LArm_1" pos="0 0 0" axis="0 1 0" limited="true" range="-1.2 1.2" armature="0.3201"/>
@@ -111,17 +112,17 @@
                                     <joint name="LArm_2" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8 0.9" armature="0.1646"/>
                                     <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LArmLinkFull" />
                                     <geom type="mesh" mesh="LArmLinkFull" />
-                                    <body name="LElbowLink" pos="0 0.2 0">
+                                    <body name="LElbowLink" pos="0 0.2 0"> <!-- pos="0 0.2 0" from shoulder, bring it to 0.25 to have forearm at 0.3, reverted to 0.2 for wanchen--> 
                                         <inertial pos="0.000513 0.034528 -0.000934" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.25" diaginertia="2.66667e-05 2.66667e-05 2.66667e-05" />
                                         <joint name="LElbow" pos="0 0 0" axis="0 1 0" limited="true" range="-1.57 1" armature="0.1925"/>
                                         <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LElbowLink" />
                                         <geom type="mesh" mesh="LElbowLink" />
-                                        <body name="LForearmLink" pos="-0.01 0.05 0">
+                                        <body name="LForearmLink" pos="-0.01 0.05 0"> <!-- pos="-0.01 0.05 0" 0.05+0.2 from shoulder--> 
                                             <inertial pos="0 0.15114 0" quat="0.653281 0.270598 -0.270598 0.653281" mass="1.18" diaginertia="0.0442 0.0442 0.0442" />
                                             <joint name="LForearm" pos="0 0 0" axis="0 0 1" limited="true" range="-2.5 0" armature="0.05088"/>
                                             <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LForearmLink" />
                                             <geom type="mesh" mesh="LForearmLink" />
-                                            <body name="forearm2lwrist_1" pos="0.01 0.24 -0.01">
+                                            <body name="forearm2lwrist_1" pos="0.01 0.21 -0.01"> <!-- pos="0.01 0.24 -0.01" -->
                                                 <inertial pos="0 0 0" mass="0.05" diaginertia="2e-06 2e-06 2e-06" />
                                                 <joint name="LWrist_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.5 1.5" armature="0.05088"/>
                                                 <body name="LHandLink" pos="0 0 0">
@@ -230,9 +231,9 @@
                                 </body>
                             </body>
                         </body>
-                        <body name="torso2rshoulder_1" pos="-0.05 -0.15 0.35">
+                        <body name="torso2rshoulder_1" pos="-0.05 -0.15 0.30">
                             <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
-                            <joint name="RArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="1.553"/>
+                            <joint name="RArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="0.553"/>
                             <body name="torso2rshoulder_2" pos="0 0 0">
                                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                                 <joint name="RArm_1" pos="0 0 0" axis="0 1 0" limited="true" range="-1.2 1.2" armature="0.3201"/>
@@ -251,7 +252,7 @@
                                             <joint name="RForearm" pos="0 0 0" axis="0 0 1" limited="true" range="0 2.5" armature="0.05088"/>
                                             <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RForearmLink" />
                                             <geom type="mesh" mesh="RForearmLink" />
-                                            <body name="forearm2rwrist_1" pos="0.01 -0.24 -0.01">
+                                            <body name="forearm2rwrist_1" pos="0.01 -0.21 -0.01">
                                                 <inertial pos="0 0 0" mass="0.05" diaginertia="2e-06 2e-06 2e-06" />
                                                 <joint name="RWrist_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.5 1.5" armature="0.05088"/>
                                                 <body name="RHandLink" pos="0 0 0">
@@ -363,28 +364,28 @@
                     </body>
                 </body>
             </body>
-            <body name="torso2lleg_1" pos="0 0.1 -0.15">
+            <body name="torso2lleg_1" pos="0 0.1 -0.1">
                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                 <joint name="LLeg_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.52 0.87" armature="0.54741"/>
                 <body name="torso2lleg_2" pos="0 0 0">
                     <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
-                    <joint name="LLeg_1" pos="0 0 0" axis="0 1 0" limited="true" range="-2.3 0.52" armature="1.0423"/>
+                    <joint name="LLeg_1" pos="0 0 0" axis="0 1 0" limited="true" range="-2.3 0.52" armature="0.5423"/>
                     <body name="LLegLink" pos="0 0 0">
                         <inertial pos="-0.0185 -0.0071 -0.178" quat="0.653281 0.270598 -0.270598 0.653281" mass="6.51" diaginertia="0.0421333 0.0421333 0.0421333" />
-                        <joint name="LLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="8.28943"/>
+                        <joint name="LLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="1.28943"/>
                         <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LLegLink" />
                         <geom type="mesh" mesh="LLegLink" />
                         <body name="LShinLink" pos="-0.025 0 -0.35">
                             <inertial pos="-0.0131 0.0025 0.0346" quat="0.653281 0.270598 -0.270598 0.653281" mass="3.095" diaginertia="0.0210667 0.0210667 0.0210667" />
-                            <joint name="LShin_0" pos="0 0 0" axis="0 1 0" limited="true" range="0 2.6" armature="0.3988"/>
+                            <joint name="LShin_0" pos="0 0 0" axis="0 1 0" limited="true" range="0 2.6" armature="0.03988"/>
                             <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LShinLink" />
                             <geom type="mesh" mesh="LShinLink" />
-                            <body name="shin2lankle_1" pos="-0.025 0 -0.375">
+                            <body name="shin2lankle_1" pos="-0.025 0 -0.37">
                                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
-                                <joint name="LAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="1.1226"/>
+                                <joint name="LAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="0.03226"/>
                                 <body name="LAnkleLink" pos="0 0 0">
-                                    <inertial pos="0.0508 0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.99" diaginertia="0.00196667 0.00196667 0.00196667" />
-                                    <joint name="LAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="2.04837"/>
+                                    <inertial pos="0.0508 0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
+                                    <joint name="LAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
                                     <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LAnkleLinkFull" />
                                     <geom type="mesh" mesh="LAnkleLinkFull" />
                                 </body>
@@ -393,28 +394,31 @@
                     </body>
                 </body>
             </body>
-            <body name="torso2rleg_1" pos="0 -0.1 -0.15">
+            <body name="torso2rleg_1" pos="0 -0.1 -0.1">
                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                 <joint name="RLeg_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.87 0.52" armature="0.54741"/>
                 <body name="torso2rleg_2" pos="0 0 0">
                     <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
-                    <joint name="RLeg_1" pos="0 0 0" axis="0 1 0" limited="true" range="-2.3 0.52" armature="1.0423"/>
+                    <joint name="RLeg_1" pos="0 0 0" axis="0 1 0" limited="true" range="-2.3 0.52" armature="0.5423"/>
                     <body name="RLegLink" pos="0 0 0">
                         <inertial pos="-0.0185 -0.0071 -0.178" quat="0.653281 0.270598 -0.270598 0.653281" mass="6.51" diaginertia="0.0421333 0.0421333 0.0421333" />
-                        <joint name="RLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="8.28943" />
+                        <!-- <joint name="RLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="8.28943" /> -->
+                        <joint name="RLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="1.28943" />
                         <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RLegLink" />
                         <geom type="mesh" mesh="RLegLink" />
                         <body name="RShinLink" pos="-0.025 0 -0.35">
                             <inertial pos="-0.0131 0.0025 0.0346" quat="0.653281 0.270598 -0.270598 0.653281" mass="3.095" diaginertia="0.0210667 0.0210667 0.0210667" />
-                            <joint name="RShin_0" pos="0 0 0" axis="0 1 0" limited="true" range="0 2.6" armature="0.3988"/>
+                            <joint name="RShin_0" pos="0 0 0" axis="0 1 0" limited="true" range="0 2.6" armature="0.03988"/>
                             <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RShinLink" />
                             <geom type="mesh" mesh="RShinLink" />
-                            <body name="shin2rankle_1" pos="-0.025 0 -0.375">
+                            <body name="shin2rankle_1" pos="-0.025 0 -0.37">
                                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
-                                <joint name="RAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="1.1226"/>
+                                <!-- <joint name="RAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="1.1226"/> -->
+                                <joint name="RAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="0.03226"/>
                                 <body name="RAnkleLink" pos="0 0 0">
-                                    <inertial pos="0.0508 -0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.99" diaginertia="0.00196667 0.00196667 0.00196667" />
-                                    <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="2.04837"/>
+                                    <inertial pos="0.0508 -0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
+                                    <!-- <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="2.04837"/> -->
+                                    <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
                                     <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RAnkleLinkFull" />
                                     <geom type="mesh" mesh="RAnkleLinkFull" />
                                 </body>
