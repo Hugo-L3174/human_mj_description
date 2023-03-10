@@ -70,6 +70,85 @@
 
     <worldbody>
         <light directional="false" diffuse="0.2 0.2 0.2" specular="0 0 0" pos="0 0 2" dir="0 0 -1" castshadow="false" />
+        
+        <!-- ====== mocap body parts ====== -->
+
+        <!-- pelvis (base_link here) -->
+        <body name="mocap_Pelvis" mocap="true" pos="0 0 1" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- torso -->
+        <body name="mocap_T8" mocap="true" pos="0 0 1" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- head -->
+        <body name="mocap_Head" mocap="true" pos="-0.025 0 1.46" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- right shoulder -->
+        <body name="mocap_Right Shoulder" mocap="true" pos="-0.05 -0.15 1.3" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- right forearm -->
+        <body name="mocap_Right Forearm" mocap="true" pos="-0.06 -0.4 1.3" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- right hand -->
+        <body name="mocap_Right Hand" mocap="true" pos="-0.05 -0.61 1.29" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- left shoulder -->
+        <body name="mocap_Left Shoulder" mocap="true" pos="-0.05 0.15 1.3" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- left forearm -->
+        <body name="mocap_Left Forearm" mocap="true" pos="-0.06 0.4 1.3" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- left hand -->
+        <body name="mocap_Left Hand" mocap="true" pos="-0.0 0.61 1.3" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- right upper leg -->
+        <body name="mocap_Right Upper Leg" mocap="true" pos="0 -0.1 0.9" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- right lower leg -->
+        <body name="mocap_Right Lower Leg" mocap="true" pos="-0.025 -0.1 0.55" > 
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- right foot -->
+        <body name="mocap_Right Foot" mocap="true" pos="-0.05 -0.1 0.18" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- left upper leg -->
+        <body name="mocap_Left Upper Leg" mocap="true" pos="0 0.1 0.9" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- left lower leg -->
+        <body name="mocap_Left Lower Leg" mocap="true" pos="-0.025 0.1 0.55" > 
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- left foot -->
+        <body name="mocap_Left Foot" mocap="true" pos="-0.05 0.1 0.18" >
+            <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
+        </body>
+
+        <!-- ====== robot (actuated part of model) ====== -->
         <body name="base_link" pos="0 0 1">
             <freejoint name="root" />
             <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HipsLinkFull" />
@@ -472,6 +551,26 @@
         <motor name="LWrist_1_motor" joint="LWrist_1" />
         <motor name="LHand_motor" joint="LHand" />
     </actuator>
+
+    <!-- equality contraint between the mocap bodies and the human model bodies -->
+    <equality>
+        <weld body1="mocap_Pelvis" body2="base_link" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_T8" body2="TorsoLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Head" body2="HeadLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Right Shoulder" body2="torso2rshoulder_1" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Right Forearm" body2="RForearmLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Right Hand" body2="RHandLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Left Shoulder" body2="torso2lshoulder_1" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Left Forearm" body2="LForearmLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Left Hand" body2="LHandLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Right Upper Leg" body2="RLegLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Right Lower Leg" body2="RShinLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Right Foot" body2="RAnkleLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Left Upper Leg" body2="LLegLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Left Lower Leg" body2="LShinLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <weld body1="mocap_Left Foot" body2="LAnkleLink" solref="0.01 1" solimp=".9 .9 0.01"/>
+        
+    </equality>
 
     <sensor>
         <!-- imu -->
