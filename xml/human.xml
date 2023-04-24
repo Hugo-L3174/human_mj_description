@@ -1,6 +1,7 @@
 <mujoco model="HUMAN">
     <compiler angle="radian" meshdir="../meshes/stl/" />
     <size njmax="500" nconmax="100" />
+    <option timestep="0.001" iterations="50"  tolerance="1e-10" solver="Newton" jacobian="dense" cone="pyramidal" />
     <!-- <option gravity="0 0 0"/> -->
     <asset>
         <texture type='skybox' builtin='gradient' width='128' height='128' rgb1='0.4 0.6 0.8' rgb2='0 0 0'/>
@@ -164,8 +165,8 @@
                     <body name="TorsoLink" pos="0 0 0">
                         <inertial pos="-0.1334 0 0.4701" quat="0.270598 0.653281 0.270598 0.653281" mass="10.779" diaginertia="0.0903 0.0903 0.0903" />
                         <joint name="Torso_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.7 0.7" armature="2.5423" />
-                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="TorsoLinkFull" />
-                        <geom type="mesh" mesh="TorsoLinkFull" />
+                        <geom type="mesh" group="1" mesh="TorsoLinkFull" condim="6"/>
+                        <geom type="mesh" mesh="TorsoLinkFull" condim="6"/>
                         <body name="torso2head_1" pos="-0.025 0 0.46"> <!-- pos="-0.025 0 0.525" -->
                             <inertial pos="0 0 0" mass="0.05" diaginertia="2e-06 2e-06 2e-06" />
                             <joint name="Head_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.62 0.62" armature="0.5"/>
@@ -189,8 +190,8 @@
                                 <body name="LArmLink" pos="0 0 0">
                                     <inertial pos="0 0.1328 0" quat="0.653281 0.270598 -0.270598 0.653281" mass="1.96" diaginertia="0.223967 0.223967 0.223967" />
                                     <joint name="LArm_2" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8 0.9" armature="0.1646"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LArmLinkFull" />
-                                    <geom type="mesh" mesh="LArmLinkFull" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LArmLinkFull" friction="0.7"/>
+                                    <geom type="mesh" mesh="LArmLinkFull" friction="0.7"/>
                                     <body name="LElbowLink" pos="0 0.2 0"> <!-- pos="0 0.2 0" from shoulder, bring it to 0.25 to have forearm at 0.3, reverted to 0.2 for wanchen--> 
                                         <inertial pos="0.000513 0.034528 -0.000934" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.25" diaginertia="2.66667e-05 2.66667e-05 2.66667e-05" />
                                         <joint name="LElbow" pos="0 0 0" axis="0 1 0" limited="true" range="-1.57 1" armature="0.1925"/>
@@ -319,8 +320,8 @@
                                 <body name="RArmLink" pos="0 0 0">
                                     <inertial pos="0 -0.1328 0" quat="0.653281 0.270598 -0.270598 0.653281" mass="1.96" diaginertia="0.223967 0.223967 0.223967" />
                                     <joint name="RArm_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.9 2.8" armature="0.1646"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RArmLinkFull" />
-                                    <geom type="mesh" mesh="RArmLinkFull" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RArmLinkFull" friction="0.7"/>
+                                    <geom type="mesh" mesh="RArmLinkFull" friction="0.7"/>
                                     <body name="RElbowLink" pos="0 -0.2 0">
                                         <inertial pos="0.000513 -0.034528 -0.000934" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.25" diaginertia="2.66667e-05 2.66667e-05 2.66667e-05" />
                                         <joint name="RElbow" pos="0 0 0" axis="0 1 0" limited="true" range="-1.57 1" armature="0.1925"/>
@@ -465,7 +466,7 @@
                                 <body name="LAnkleLink" pos="0 0 0">
                                     <inertial pos="0.0508 0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
                                     <joint name="LAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LAnkleLinkFull" />
+                                    <geom type="mesh" group="1" mesh="LAnkleLinkFull" condim="6"/>
                                     <geom type="mesh" mesh="LAnkleLinkFull" />
                                 </body>
                             </body>
@@ -498,7 +499,7 @@
                                     <inertial pos="0.0508 -0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
                                     <!-- <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="2.04837"/> -->
                                     <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RAnkleLinkFull" />
+                                    <geom type="mesh" group="1" mesh="RAnkleLinkFull" condim="6"/>
                                     <geom type="mesh" mesh="RAnkleLinkFull" />
                                 </body>
                             </body>
