@@ -3,25 +3,36 @@
     <size njmax="500" nconmax="100" />
     <option timestep="0.001" iterations="50"  tolerance="1e-10" solver="Newton" jacobian="dense" cone="pyramidal" />
     <!-- <option gravity="0 0 0"/> -->
+
+    <default>
+        <default class="collision">
+            <geom condim="3" material="matgeom" type="mesh" group="0" />
+        </default>
+        <default class="visual">
+            <geom condim="3" material="matgeom" type="mesh" group="1" conaffinity="0" contype="0" />
+        </default>
+        <!-- <mesh scale="0.7 0.7 0.7"/> -->
+    </default>
+
     <asset>
         <texture type='skybox' builtin='gradient' width='128' height='128' rgb1='0.4 0.6 0.8' rgb2='0 0 0'/>
-        <mesh name="HipsLinkFull" file="HipsLinkFull.stl" scale=" 1 1 0.8"/> <!-- scale=" 1 1 0.86" for louise-->
-        <mesh name="TorsoLinkFull" file="TorsoLinkFull.stl" scale=" 1 1 0.9"/>
-        <mesh name="HeadLinkFull" file="HeadLinkFull.stl" />
-        <mesh name="LArmLinkFull" file="LArmLinkFull.stl" scale=" 1 1 1"/> <!-- scale=" 1 1.25 1" for louise-->
-        <mesh name="LElbowLink" file="LElbowLink.stl" />
-        <mesh name="LForearmLink" file="LForearmLink.stl" scale=" 1 0.875 1"/>
-        <mesh name="LWrist" file="LWrist.stl" />
-        <mesh name="RArmLinkFull" file="RArmLinkFull.stl" scale=" 1 1 1"/>
-        <mesh name="RElbowLink" file="RElbowLink.stl" />
-        <mesh name="RForearmLink" file="RForearmLink.stl" scale=" 1 0.875 1"/>
-        <mesh name="RWrist" file="RWrist.stl" />
-        <mesh name="LLegLink" file="LLegLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.14" for louise-->
-        <mesh name="LShinLink" file="LShinLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.147" for louise-->
+        <mesh name="HipsLinkFull" file="HipsLinkFull.stl" scale=" 0.8 0.8 0.8"/> <!--scale=" 1 1 0.8" scale=" 1 1 0.86" for louise-->
+        <mesh name="TorsoLinkFull" file="TorsoLinkFull.stl" scale=" 0.8 0.9 0.9"/> <!--scale=" 1 1 0.9"-->
+        <mesh name="HeadLinkFull" file="HeadLinkFull.stl" scale=" 0.9 0.9 0.9"/> <!-- scale=" 1 1 1" -->
+        <mesh name="LArmLinkFull" file="LArmLinkFull.stl" scale=" 0.7 0.8 0.8"/> <!-- scale=" 1 1 1" -->  <!-- scale=" 1 1.25 1" for louise-->
+        <mesh name="LElbowLink" file="LElbowLink.stl" scale=" 0.8 1 0.8"/> <!-- scale=" 1 1 1" -->
+        <mesh name="LForearmLink" file="LForearmLink.stl" scale="0.9 0.875 0.9"/> <!--scale=" 1 0.875 1"-->
+        <mesh name="LWrist" file="LWrist.stl" /> <!--scale=" 1 1 1"-->
+        <mesh name="RArmLinkFull" file="RArmLinkFull.stl" scale=" 0.7 0.8 0.8 "/> <!--scale=" 1 1 1"-->
+        <mesh name="RElbowLink" file="RElbowLink.stl" scale=" 0.8 1 0.8 " /> <!--scale=" 1 1 1"-->
+        <mesh name="RForearmLink" file="RForearmLink.stl" scale=" 0.9 0.875 0.9"/> <!--scale=" 1 0.875 1"-->
+        <mesh name="RWrist" file="RWrist.stl" /> <!--scale=" 1 1 1"-->
+        <mesh name="LLegLink" file="LLegLink.stl" scale=" 0.8 0.8 0.9"/> <!--scale=" 1 1 1"-->  <!-- scale=" 1 1 1.14" for louise-->
+        <mesh name="LShinLink" file="LShinLink.stl" scale=" 0.8 0.8 0.9"/> <!--scale=" 1 1 1"-->  <!-- scale=" 1 1 1.147" for louise-->
         <mesh name="LAnkleLinkFull" file="LAnkleLinkFull.stl" />
-        <mesh name="RLegLink" file="RLegLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.14" for louise-->
-        <mesh name="RShinLink" file="RShinLink.stl" scale=" 1 1 1"/>  <!-- scale=" 1 1 1.147" for louise-->
-        <mesh name="RAnkleLinkFull" file="RAnkleLinkFull.stl" />
+        <mesh name="RLegLink" file="RLegLink.stl" scale=" 0.8 0.8 0.9"/> <!--scale=" 1 1 1"-->  <!-- scale=" 1 1 1.14" for louise-->
+        <mesh name="RShinLink" file="RShinLink.stl" scale=" 0.8 0.8 0.9"/> <!--scale=" 1 1 1"-->  <!-- scale=" 1 1 1.147" for louise-->
+        <mesh name="RAnkleLinkFull" file="RAnkleLinkFull.stl" /> <!--scale=" 1 1 1"-->
         <mesh name="LThumb0thPhalange" file="LThumb0thPhalange.stl" />
         <mesh name="LThumb1stPhalange" file="LThumb1stPhalange.stl" />
         <mesh name="LThumb2ndPhalange" file="LThumb2ndPhalange.stl" />
@@ -52,6 +63,8 @@
         <mesh name="RBaby1stPhalange" file="RBaby1stPhalange.stl" />
         <mesh name="RBaby2ndPhalange" file="RBaby2ndPhalange.stl" />
         <mesh name="RBaby3rdPhalange" file="RBaby3rdPhalange.stl" />
+        <texture name="texgeom" type="cube" builtin="flat" mark="cross" width="127" height="1278" rgb1="1 1 1" rgb2="1 1 1" markrgb="1 1 1" random="0.01" />
+        <material name="matgeom" texture="texgeom" texuniform="true" rgba="0.8 0.8 0.8 1" />
     </asset>
 
     <contact>
@@ -59,8 +72,81 @@
         <exclude body1="base_link" body2="LLegLink" />
         <exclude body1="base_link" body2="RLegLink" />
         <exclude body1="TorsoLink" body2="HeadLink" />
+
         <exclude body1="TorsoLink" body2="LArmLink" />
+        <exclude body1="TorsoLink" body2="LElbowLink" />
+        <exclude body1="TorsoLink" body2="LHandLink" />
+        <exclude body1="TorsoLink" body2="LHandThumb0Link" />
+        <exclude body1="TorsoLink" body2="LHandThumb1Link" />
+        <exclude body1="TorsoLink" body2="LHandThumb2Link" />
+        <exclude body1="TorsoLink" body2="LHandIndex1Link" />
+        <exclude body1="TorsoLink" body2="LHandIndex2Link" />
+        <exclude body1="TorsoLink" body2="LHandIndex3Link" />
+        <exclude body1="TorsoLink" body2="LHandMiddle1Link" />
+        <exclude body1="TorsoLink" body2="LHandMiddle2Link" />
+        <exclude body1="TorsoLink" body2="LHandMiddle3Link" />
+        <exclude body1="TorsoLink" body2="LHandRing1Link" />
+        <exclude body1="TorsoLink" body2="LHandRing2Link" />
+        <exclude body1="TorsoLink" body2="LHandRing3Link" />
+        <exclude body1="TorsoLink" body2="LHandBaby1Link" />
+        <exclude body1="TorsoLink" body2="LHandBaby2Link" />
+        <exclude body1="TorsoLink" body2="LHandBaby3Link" />
+
         <exclude body1="TorsoLink" body2="RArmLink" />
+        <exclude body1="TorsoLink" body2="RElbowLink" />
+        <exclude body1="TorsoLink" body2="RHandLink" />
+        <exclude body1="TorsoLink" body2="RHandThumb0Link" />
+        <exclude body1="TorsoLink" body2="RHandThumb1Link" />
+        <exclude body1="TorsoLink" body2="RHandThumb2Link" />
+        <exclude body1="TorsoLink" body2="RHandIndex1Link" />
+        <exclude body1="TorsoLink" body2="RHandIndex2Link" />
+        <exclude body1="TorsoLink" body2="RHandIndex3Link" />
+        <exclude body1="TorsoLink" body2="RHandMiddle1Link" />
+        <exclude body1="TorsoLink" body2="RHandMiddle2Link" />
+        <exclude body1="TorsoLink" body2="RHandMiddle3Link" />
+        <exclude body1="TorsoLink" body2="RHandRing1Link" />
+        <exclude body1="TorsoLink" body2="RHandRing2Link" />
+        <exclude body1="TorsoLink" body2="RHandRing3Link" />
+        <exclude body1="TorsoLink" body2="RHandBaby1Link" />
+        <exclude body1="TorsoLink" body2="RHandBaby2Link" />
+        <exclude body1="TorsoLink" body2="RHandBaby3Link" />
+
+        <exclude body1="LLegLink" body2="LForearmLink" />
+        <exclude body1="LLegLink" body2="LHandLink" />
+        <exclude body1="LLegLink" body2="LHandThumb0Link" />
+        <exclude body1="LLegLink" body2="LHandThumb1Link" />
+        <exclude body1="LLegLink" body2="LHandThumb2Link" />
+        <exclude body1="LLegLink" body2="LHandIndex1Link" />
+        <exclude body1="LLegLink" body2="LHandIndex2Link" />
+        <exclude body1="LLegLink" body2="LHandIndex3Link" />
+        <exclude body1="LLegLink" body2="LHandMiddle1Link" />
+        <exclude body1="LLegLink" body2="LHandMiddle2Link" />
+        <exclude body1="LLegLink" body2="LHandMiddle3Link" />
+        <exclude body1="LLegLink" body2="LHandRing1Link" />
+        <exclude body1="LLegLink" body2="LHandRing2Link" />
+        <exclude body1="LLegLink" body2="LHandRing3Link" />
+        <exclude body1="LLegLink" body2="LHandBaby1Link" />
+        <exclude body1="LLegLink" body2="LHandBaby2Link" />
+        <exclude body1="LLegLink" body2="LHandBaby3Link" />
+
+        <exclude body1="RLegLink" body2="RForearmLink" />
+        <exclude body1="RLegLink" body2="RHandLink" />
+        <exclude body1="RLegLink" body2="RHandThumb0Link" />
+        <exclude body1="RLegLink" body2="RHandThumb1Link" />
+        <exclude body1="RLegLink" body2="RHandThumb2Link" />
+        <exclude body1="RLegLink" body2="RHandIndex1Link" />
+        <exclude body1="RLegLink" body2="RHandIndex2Link" />
+        <exclude body1="RLegLink" body2="RHandIndex3Link" />
+        <exclude body1="RLegLink" body2="RHandMiddle1Link" />
+        <exclude body1="RLegLink" body2="RHandMiddle2Link" />
+        <exclude body1="RLegLink" body2="RHandMiddle3Link" />
+        <exclude body1="RLegLink" body2="RHandRing1Link" />
+        <exclude body1="RLegLink" body2="RHandRing2Link" />
+        <exclude body1="RLegLink" body2="RHandRing3Link" />
+        <exclude body1="RLegLink" body2="RHandBaby1Link" />
+        <exclude body1="RLegLink" body2="RHandBaby2Link" />
+        <exclude body1="RLegLink" body2="RHandBaby3Link" />
+        
         <exclude body1="LArmLink" body2="LForearmLink" />
         <exclude body1="LForearmLink" body2="LHandLink" />
         <exclude body1="RArmLink" body2="RForearmLink" />
@@ -90,70 +176,70 @@
         </body>
 
         <!-- right shoulder -->
-        <body name="mocap_Right Upper Arm" mocap="true" pos="-0.05 -0.15 1.3" >
+        <body name="mocap_Right Upper Arm" mocap="true" pos="-0.02 -0.15 1.27" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- right forearm -->
-        <body name="mocap_Right Forearm" mocap="true" pos="-0.06 -0.4 1.3" >
+        <body name="mocap_Right Forearm" mocap="true" pos="-0.03 -0.37 1.27" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- right hand -->
-        <body name="mocap_Right Hand" mocap="true" pos="-0.05 -0.61 1.29" >
+        <body name="mocap_Right Hand" mocap="true" pos="-0.02 -0.60 1.26" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left shoulder -->
-        <body name="mocap_Left Upper Arm" mocap="true" pos="-0.05 0.15 1.3" >
+        <body name="mocap_Left Upper Arm" mocap="true" pos="-0.02 0.15 1.27" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left forearm -->
-        <body name="mocap_Left Forearm" mocap="true" pos="-0.06 0.4 1.3" >
+        <body name="mocap_Left Forearm" mocap="true" pos="-0.03 0.37 1.27" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left hand -->
-        <body name="mocap_Left Hand" mocap="true" pos="-0.0 0.61 1.3" >
+        <body name="mocap_Left Hand" mocap="true" pos="-0.02 0.60 1.26" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- right upper leg -->
-        <body name="mocap_Right Upper Leg" mocap="true" pos="0 -0.1 0.9" >
+        <body name="mocap_Right Upper Leg" mocap="true" pos="0 -0.09 0.9" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- right lower leg -->
-        <body name="mocap_Right Lower Leg" mocap="true" pos="-0.025 -0.1 0.55" > 
+        <body name="mocap_Right Lower Leg" mocap="true" pos="-0.025 -0.09 0.58" > 
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- right foot -->
-        <body name="mocap_Right Foot" mocap="true" pos="-0.05 -0.1 0.18" >
+        <body name="mocap_Right Foot" mocap="true" pos="-0.05 -0.09 0.21" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left upper leg -->
-        <body name="mocap_Left Upper Leg" mocap="true" pos="0 0.1 0.9" >
+        <body name="mocap_Left Upper Leg" mocap="true" pos="0 0.09 0.9" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left lower leg -->
-        <body name="mocap_Left Lower Leg" mocap="true" pos="-0.025 0.1 0.55" > 
+        <body name="mocap_Left Lower Leg" mocap="true" pos="-0.025 0.09 0.58" > 
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left foot -->
-        <body name="mocap_Left Foot" mocap="true" pos="-0.05 0.1 0.18" >
+        <body name="mocap_Left Foot" mocap="true" pos="-0.05 0.08 0.21" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- ====== robot (actuated part of model) ====== -->
         <body name="base_link" pos="0 0 1">
             <freejoint name="root" />
-            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HipsLinkFull" />
-            <geom type="mesh" mesh="HipsLinkFull" />
+            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="HipsLinkFull" />
+            <geom class="collision" type="mesh" mesh="HipsLinkFull" />
             <!-- site for root imu sensor -->
 	        <site name="Gyro" size="0.01" pos=" 0 0 0" />
             <body name="hip2torso_1" pos="0 0 0">
@@ -165,9 +251,9 @@
                     <body name="TorsoLink" pos="0 0 0">
                         <inertial pos="-0.1334 0 0.4701" quat="0.270598 0.653281 0.270598 0.653281" mass="10.779" diaginertia="0.0903 0.0903 0.0903" />
                         <joint name="Torso_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.7 0.7" armature="2.5423" />
-                        <geom type="mesh" group="1" mesh="TorsoLinkFull" condim="6"/>
-                        <geom type="mesh" mesh="TorsoLinkFull" condim="6"/>
-                        <body name="torso2head_1" pos="-0.025 0 0.46"> <!-- pos="-0.025 0 0.525" -->
+                        <geom class="visual" type="mesh" group="1" mesh="TorsoLinkFull" condim="6"/>
+                        <geom class="collision" type="mesh" mesh="TorsoLinkFull" condim="6"/>
+                        <body name="torso2head_1" pos="-0.025 0 0.46"> <!-- pos="-0.025 0 0.525" pos="-0.025 0 0.46" -->
                             <inertial pos="0 0 0" mass="0.05" diaginertia="2e-06 2e-06 2e-06" />
                             <joint name="Head_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.62 0.62" armature="0.5"/>
                             <body name="torso2head_2" pos="0 0 0">
@@ -176,12 +262,12 @@
                                 <body name="HeadLink" pos="0 0 0">
                                     <inertial pos="0.0459 0 0.0433" quat="0.653281 0.270598 -0.270598 0.653281" mass="4.7372" diaginertia="0.0630333 0.0630333 0.0630333" />
                                     <joint name="Head_2" pos="0 0 0" axis="0 0 1" limited="true" range="-1.1 1.1" armature="0.18"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HeadLinkFull" />
-                                    <geom type="mesh" mesh="HeadLinkFull" />
+                                    <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="HeadLinkFull" />
+                                    <geom class="collision" type="mesh" mesh="HeadLinkFull" />
                                 </body>
                             </body>
                         </body>
-                        <body name="torso2lshoulder_1" pos="-0.05 0.15 0.30">
+                        <body name="torso2lshoulder_1" pos="-0.02 0.15 0.30"> <!-- pos="-0.05 0.15 0.30"-->
                             <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                             <joint name="LArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="0.553"/>
                             <body name="torso2lshoulder_2" pos="0 0 0">
@@ -190,26 +276,26 @@
                                 <body name="LArmLink" pos="0 0 0">
                                     <inertial pos="0 0.1328 0" quat="0.653281 0.270598 -0.270598 0.653281" mass="1.96" diaginertia="0.223967 0.223967 0.223967" />
                                     <joint name="LArm_2" pos="0 0 0" axis="0 0 1" limited="true" range="-2.8 0.9" armature="0.1646"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LArmLinkFull" friction="0.7"/>
-                                    <geom type="mesh" mesh="LArmLinkFull" friction="0.7"/>
-                                    <body name="LElbowLink" pos="0 0.2 0"> <!-- pos="0 0.2 0" from shoulder, bring it to 0.25 to have forearm at 0.3, reverted to 0.2 for wanchen--> 
+                                    <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LArmLinkFull" friction="0.7"/>
+                                    <geom class="collision" type="mesh" mesh="LArmLinkFull" friction="0.7"/>
+                                    <body name="LElbowLink" pos="0 0.16 0"> <!-- pos="0 0.2 0" from shoulder, bring it to 0.25 to have forearm at 0.3, reverted to 0.2 for wanchen--> 
                                         <inertial pos="0.000513 0.034528 -0.000934" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.25" diaginertia="2.66667e-05 2.66667e-05 2.66667e-05" />
                                         <joint name="LElbow" pos="0 0 0" axis="0 1 0" limited="true" range="-1.57 1" armature="0.1925"/>
-                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LElbowLink" />
-                                        <geom type="mesh" mesh="LElbowLink" />
-                                        <body name="LForearmLink" pos="-0.01 0.05 0"> <!-- pos="-0.01 0.05 0" 0.05+0.2 from shoulder--> 
+                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LElbowLink" />
+                                        <geom class="collision" type="mesh" mesh="LElbowLink" />
+                                        <body name="LForearmLink" pos="-0.01 0.06 0"> <!-- pos="-0.01 0.05 0" 0.05+0.2 from shoulder--> 
                                             <inertial pos="0 0.15114 0" quat="0.653281 0.270598 -0.270598 0.653281" mass="1.18" diaginertia="0.0442 0.0442 0.0442" />
                                             <joint name="LForearm" pos="0 0 0" axis="0 0 1" limited="true" range="-2.5 0" armature="0.05088"/>
-                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LForearmLink" />
-                                            <geom type="mesh" mesh="LForearmLink" />
-                                            <body name="forearm2lwrist_1" pos="0.01 0.21 -0.01"> <!-- pos="0.01 0.24 -0.01" -->
+                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LForearmLink" />
+                                            <geom class="collision" type="mesh" mesh="LForearmLink" />
+                                            <body name="forearm2lwrist_1" pos="0.01 0.23 -0.01"> <!-- pos="0.01 0.24 -0.01" -->
                                                 <inertial pos="0 0 0" mass="0.05" diaginertia="2e-06 2e-06 2e-06" />
                                                 <joint name="LWrist_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.5 1.5" armature="0.05088"/>
                                                 <body name="LHandLink" pos="0 0 0">
                                                     <inertial pos="0.0139 0.042 -0.0128" quat="0.270598 0.653281 0.270598 0.653281" mass="0.272" diaginertia="6.37267e-05 6.37267e-05 6.37267e-05" />
                                                     <joint name="LWrist_1" pos="0 0 0" axis="0 0 1" limited="true" range="-0.35 0.35" armature="0.05088"/>
-                                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LWrist" />
-                                                    <geom type="mesh" mesh="LWrist" />
+                                                    <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LWrist" />
+                                                    <geom class="collision" type="mesh" mesh="LWrist" />
                                                     <body name="l_gripper" pos="0.025 0 0">
                                                         <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
                                                         <joint name="LHand" pos="0 0 0" axis="1 0 0" limited="true" range="0 1" armature="0.05088"/>
@@ -217,90 +303,90 @@
                                                     <body name="LHandThumb0Link" pos="0.025 0.016 -0.016" quat="0.91017 0.232405 0.0848343 0.332238">
                                                         <inertial pos="0.019337 0.003385 -0.004077" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="3.33333e-06 3.33333e-06 3.33333e-06" />
                                                         <!-- <joint name="LHandThumbLink1" pos="0 0 0" axis="0 1 0" range="0 1" armature="1.34"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb0thPhalange" />
-                                                        <geom type="mesh" mesh="LThumb0thPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb0thPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="LThumb0thPhalange" />
                                                         <body name="LHandThumb1Link" pos="0.045 0 0">
                                                             <inertial pos="0.01028 0.001082 0.002081" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                             <!-- <joint name="LHandThumbLink2" pos="0 0 0" axis="0 1 0" range="0 1" armature="1.34"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb1stPhalange" />
-                                                            <geom type="mesh" mesh="LThumb1stPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb1stPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="LThumb1stPhalange" />
                                                             <body name="LHandThumb2Link" pos="0.026 0 0">
                                                                 <inertial pos="0.016873 0.000626 -0.001112" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                                 <!-- <joint name="LHandThumbLink3" pos="0 0 0" axis="0 1 0" range="0 1" armature="1.34"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb2ndPhalange" />
-                                                                <geom type="mesh" mesh="LThumb2ndPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb2ndPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="LThumb2ndPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="LHandIndex1Link" pos="0.0425 0.078 -0.01">
                                                         <inertial pos="-0.001367 0.01696 0.001019" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.66667e-06 1.66667e-06 1.66667e-06" />
                                                         <!-- <joint name="LHandIndexLink1" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LIndex1stPhalange" />
-                                                        <geom type="mesh" mesh="LIndex1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LIndex1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="LIndex1stPhalange" />
                                                         <body name="LHandIndex2Link" pos="0 0.035 0">
                                                             <inertial pos="0.000441 0.009184 0.000856" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                             <!-- <joint name="LHandIndexLink2" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LIndex2ndPhalange" />
-                                                            <geom type="mesh" mesh="LIndex2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LIndex2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="LIndex2ndPhalange" />
                                                             <body name="LHandIndex3Link" pos="0 0.022 0">
                                                                 <inertial pos="-0.001129 0.010116 0.001347" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                                 <!-- <joint name="LHandIndexLink3" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LIndex3rdPhalange" />
-                                                                <geom type="mesh" mesh="LIndex3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LIndex3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="LIndex3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="LHandMiddle1Link" pos="0.02 0.09 -0.01">
                                                         <inertial pos="-0.000126 0.013279 0.000876" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                         <!-- <joint name="LHandMiddleLink1" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LMiddle1stPhalange" />
-                                                        <geom type="mesh" mesh="LMiddle1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LMiddle1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="LMiddle1stPhalange" />
                                                         <body name="LHandMiddle2Link" pos="0 0.028 0">
                                                             <inertial pos="-0.000232 0.010285 0.001535" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                             <!-- <joint name="LHandMiddleLink2" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LMiddle2ndPhalange" />
-                                                            <geom type="mesh" mesh="LMiddle2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LMiddle2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="LMiddle2ndPhalange" />
                                                             <body name="LHandMiddle3Link" pos="0 0.025 0">
                                                                 <inertial pos="-0.000228 0.009327 0.001888" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                                 <!-- <joint name="LHandMiddleLink3" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LMiddle3rdPhalange" />
-                                                                <geom type="mesh" mesh="LMiddle3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LMiddle3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="LMiddle3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="LHandRing1Link" pos="-0.001 0.085 -0.01">
                                                         <inertial pos="-0.001164 0.011568 -0.002292" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                         <!-- <joint name="LHandRingLink1" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LRing1stPhalange" />
-                                                        <geom type="mesh" mesh="LRing1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LRing1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="LRing1stPhalange" />
                                                         <body name="LHandRing2Link" pos="0 0.0225 0">
                                                             <inertial pos="-0.000672 0.011883 0.001817" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                             <!-- <joint name="LHandRingLink2" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LRing2ndPhalange" />
-                                                            <geom type="mesh" mesh="LRing2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LRing2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="LRing2ndPhalange" />
                                                             <body name="LHandRing3Link" pos="0 0.028 0">
                                                                 <inertial pos="0.000957 0.007793 0.000943" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                                 <!-- <joint name="LHandRingLink3" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LRing3rdPhalange" />
-                                                                <geom type="mesh" mesh="LRing3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LRing3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="LRing3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="LHandBaby1Link" pos="-0.015 0.079 -0.022">
                                                         <inertial pos="-0.000982 0.009799 0.000912" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                         <!-- <joint name="LHandBabyLink1" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LBaby1stPhalange" />
-                                                        <geom type="mesh" mesh="LBaby1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LBaby1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="LBaby1stPhalange" />
                                                         <body name="LHandBaby2Link" pos="0 0.02 0">
                                                             <inertial pos="-0.000602 0.009315 0.001953" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                             <!-- <joint name="LHandBabyLink2" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LBaby2ndPhalange" />
-                                                            <geom type="mesh" mesh="LBaby2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LBaby2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="LBaby2ndPhalange" />
                                                             <body name="LHandBaby3Link" pos="0 0.02 0">
                                                                 <inertial pos="-0.018741 0.030511 0.01986" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="8.33333e-06 8.33333e-06 8.33333e-06" />
                                                                 <!-- <joint name="LHandBabyLink3" pos="0 0 0" axis="-1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LBaby3rdPhalange" />
-                                                                <geom type="mesh" mesh="LBaby3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LBaby3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="LBaby3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
@@ -311,7 +397,7 @@
                                 </body>
                             </body>
                         </body>
-                        <body name="torso2rshoulder_1" pos="-0.05 -0.15 0.30">
+                        <body name="torso2rshoulder_1" pos="-0.02 -0.15 0.30"> <!-- pos="-0.05 -0.15 0.30" -->
                             <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                             <joint name="RArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="0.553"/>
                             <body name="torso2rshoulder_2" pos="0 0 0">
@@ -320,26 +406,26 @@
                                 <body name="RArmLink" pos="0 0 0">
                                     <inertial pos="0 -0.1328 0" quat="0.653281 0.270598 -0.270598 0.653281" mass="1.96" diaginertia="0.223967 0.223967 0.223967" />
                                     <joint name="RArm_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.9 2.8" armature="0.1646"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RArmLinkFull" friction="0.7"/>
-                                    <geom type="mesh" mesh="RArmLinkFull" friction="0.7"/>
-                                    <body name="RElbowLink" pos="0 -0.2 0">
+                                    <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RArmLinkFull" friction="0.7"/>
+                                    <geom class="collision" type="mesh" mesh="RArmLinkFull" friction="0.7"/>
+                                    <body name="RElbowLink" pos="0 -0.16 0"> <!-- pos="0 -0.2 0" -->
                                         <inertial pos="0.000513 -0.034528 -0.000934" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.25" diaginertia="2.66667e-05 2.66667e-05 2.66667e-05" />
                                         <joint name="RElbow" pos="0 0 0" axis="0 1 0" limited="true" range="-1.57 1" armature="0.1925"/>
-                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RElbowLink" />
-                                        <geom type="mesh" mesh="RElbowLink" />
-                                        <body name="RForearmLink" pos="-0.01 -0.05 0">
+                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RElbowLink" />
+                                        <geom class="collision" type="mesh" mesh="RElbowLink" />
+                                        <body name="RForearmLink" pos="-0.01 -0.06 0"> <!-- pos="-0.01 -0.05 0" -->
                                             <inertial pos="0 -0.15114 0" quat="0.653281 0.270598 -0.270598 0.653281" mass="1.18" diaginertia="0.0442 0.0442 0.0442" />
                                             <joint name="RForearm" pos="0 0 0" axis="0 0 1" limited="true" range="0 2.5" armature="0.05088"/>
-                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RForearmLink" />
-                                            <geom type="mesh" mesh="RForearmLink" />
-                                            <body name="forearm2rwrist_1" pos="0.01 -0.21 -0.01">
+                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RForearmLink" />
+                                            <geom class="collision" type="mesh" mesh="RForearmLink" />
+                                            <body name="forearm2rwrist_1" pos="0.01 -0.23 -0.01"> <!-- pos="0.01 -0.21 -0.01" -->
                                                 <inertial pos="0 0 0" mass="0.05" diaginertia="2e-06 2e-06 2e-06" />
                                                 <joint name="RWrist_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.5 1.5" armature="0.05088"/>
                                                 <body name="RHandLink" pos="0 0 0">
                                                     <inertial pos="0.0139 -0.042 -0.0128" quat="0.270598 0.653281 0.270598 0.653281" mass="0.272" diaginertia="6.37267e-05 6.37267e-05 6.37267e-05" />
                                                     <joint name="RWrist_1" pos="0 0 0" axis="0 0 1" limited="true" range="-0.35 0.35" armature="0.05088"/>
-                                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RWrist" />
-                                                    <geom type="mesh" mesh="RWrist" />
+                                                    <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RWrist" />
+                                                    <geom class="collision" type="mesh" mesh="RWrist" />
                                                     <body name="r_gripper" pos="0.025 0 0">
                                                         <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
                                                         <joint name="RHand" pos="0 0 0" axis="1 0 0" limited="true" range="0 1" armature="0.05088"/>
@@ -347,90 +433,90 @@
                                                     <body name="RHandThumb0Link" pos="0.025 -0.016 -0.016" quat="0.91017 -0.232405 0.0848343 -0.332238">
                                                         <inertial pos="0.019337 -0.003385 -0.004077" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="3.33333e-06 3.33333e-06 3.33333e-06" />
                                                         <!-- <joint name="RHandThumbLink1" pos="0 0 0" axis="0 1 0" range="0 1" armature="1.34"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb0thPhalange" />
-                                                        <geom type="mesh" mesh="RThumb0thPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb0thPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="RThumb0thPhalange" />
                                                         <body name="RHandThumb1Link" pos="0.045 0 0">
                                                             <inertial pos="0.01028 -0.001082 0.002081" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                             <!-- <joint name="RHandThumbLink2" pos="0 0 0" axis="0 1 0" range="0 1" armature="1.34"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb1stPhalange" />
-                                                            <geom type="mesh" mesh="RThumb1stPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb1stPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="RThumb1stPhalange" />
                                                             <body name="RHandThumb2Link" pos="0.026 0 0">
                                                                 <inertial pos="0.016873 -0.000626 -0.001112" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                                 <!-- <joint name="RHandThumbLink3" pos="0 0 0" axis="0 1 0" range="0 1" armature="1.34"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb2ndPhalange" />
-                                                                <geom type="mesh" mesh="RThumb2ndPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb2ndPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="RThumb2ndPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="RHandIndex1Link" pos="0.0425 -0.078 -0.01">
                                                         <inertial pos="-0.001367 -0.01696 0.001019" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.66667e-06 1.66667e-06 1.66667e-06" />
                                                         <!-- <joint name="RHandIndexLink1" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RIndex1stPhalange" />
-                                                        <geom type="mesh" mesh="RIndex1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RIndex1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="RIndex1stPhalange" />
                                                         <body name="RHandIndex2Link" pos="0 -0.035 0">
                                                             <inertial pos="0.000441 -0.009184 0.000856" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                             <!-- <joint name="RHandIndexLink2" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RIndex2ndPhalange" />
-                                                            <geom type="mesh" mesh="RIndex2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RIndex2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="RIndex2ndPhalange" />
                                                             <body name="RHandIndex3Link" pos="0 -0.022 0">
                                                                 <inertial pos="-0.001129 -0.010116 0.001347" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                                 <!-- <joint name="RHandIndexLink3" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RIndex3rdPhalange" />
-                                                                <geom type="mesh" mesh="RIndex3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RIndex3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="RIndex3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="RHandMiddle1Link" pos="0.02 -0.09 -0.01">
                                                         <inertial pos="-0.000126 -0.013279 0.000876" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                         <!-- <joint name="RHandMiddleLink1" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RMiddle1stPhalange" />
-                                                        <geom type="mesh" mesh="RMiddle1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RMiddle1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="RMiddle1stPhalange" />
                                                         <body name="RHandMiddle2Link" pos="0 -0.028 0">
                                                             <inertial pos="-0.000232 -0.010285 0.001535" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                             <!-- <joint name="RHandMiddleLink2" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RMiddle2ndPhalange" />
-                                                            <geom type="mesh" mesh="RMiddle2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RMiddle2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="RMiddle2ndPhalange" />
                                                             <body name="RHandMiddle3Link" pos="0 -0.025 0">
                                                                 <inertial pos="-0.000228 -0.009327 0.001888" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                                 <!-- <joint name="RHandMiddleLink3" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RMiddle3rdPhalange" />
-                                                                <geom type="mesh" mesh="RMiddle3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RMiddle3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="RMiddle3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="RHandRing1Link" pos="-0.001 -0.085 -0.01">
                                                         <inertial pos="-0.001164 -0.011568 -0.002292" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1.33333e-06 1.33333e-06 1.33333e-06" />
                                                         <!-- <joint name="RHandRingLink1" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RRing1stPhalange" />
-                                                        <geom type="mesh" mesh="RRing1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RRing1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="RRing1stPhalange" />
                                                         <body name="RHandRing2Link" pos="0 -0.0225 0">
                                                             <inertial pos="-0.000672 -0.011883 0.001817" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                             <!-- <joint name="RHandRingLink2" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RRing2ndPhalange" />
-                                                            <geom type="mesh" mesh="RRing2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RRing2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="RRing2ndPhalange" />
                                                             <body name="RHandRing3Link" pos="0 -0.028 0">
                                                                 <inertial pos="0.000957 -0.007793 0.000943" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                                 <!-- <joint name="RHandRingLink3" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RRing3rdPhalange" />
-                                                                <geom type="mesh" mesh="RRing3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RRing3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="RRing3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
                                                     <body name="RHandBaby1Link" pos="-0.015 -0.079 -0.022">
                                                         <inertial pos="-0.000982 -0.009799 0.000912" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="1e-06 1e-06 1e-06" />
                                                         <!-- <joint name="RHandBabyLink1" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RBaby1stPhalange" />
-                                                        <geom type="mesh" mesh="RBaby1stPhalange" />
+                                                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RBaby1stPhalange" />
+                                                        <geom class="collision" type="mesh" mesh="RBaby1stPhalange" />
                                                         <body name="RHandBaby2Link" pos="0 -0.02 0">
                                                             <inertial pos="-0.000602 -0.009315 0.001953" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="6.66667e-07 6.66667e-07 6.66667e-07" />
                                                             <!-- <joint name="RHandBabyLink2" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RBaby2ndPhalange" />
-                                                            <geom type="mesh" mesh="RBaby2ndPhalange" />
+                                                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RBaby2ndPhalange" />
+                                                            <geom class="collision" type="mesh" mesh="RBaby2ndPhalange" />
                                                             <body name="RHandBaby3Link" pos="0 -0.02 0">
                                                                 <inertial pos="-0.018741 -0.030511 0.01986" quat="0.653281 0.270598 -0.270598 0.653281" mass="0.0182" diaginertia="8.33333e-06 8.33333e-06 8.33333e-06" />
                                                                 <!-- <joint name="RHandBabyLink3" pos="0 0 0" axis="1 0 0" range="0 1" armature="0.5955"/> -->
-                                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RBaby3rdPhalange" />
-                                                                <geom type="mesh" mesh="RBaby3rdPhalange" />
+                                                                <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RBaby3rdPhalange" />
+                                                                <geom class="collision" type="mesh" mesh="RBaby3rdPhalange" />
                                                             </body>
                                                         </body>
                                                     </body>
@@ -444,7 +530,7 @@
                     </body>
                 </body>
             </body>
-            <body name="torso2lleg_1" pos="0 0.1 -0.1">
+            <body name="torso2lleg_1" pos="0 0.09 -0.1"> <!-- pos="0 0.1 -0.1"-->
                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                 <joint name="LLeg_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.52 0.87" armature="0.54741"/>
                 <body name="torso2lleg_2" pos="0 0 0">
@@ -453,28 +539,28 @@
                     <body name="LLegLink" pos="0 0 0">
                         <inertial pos="-0.0185 -0.0071 -0.178" quat="0.653281 0.270598 -0.270598 0.653281" mass="6.51" diaginertia="0.0421333 0.0421333 0.0421333" />
                         <joint name="LLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="1.28943"/>
-                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LLegLink" />
-                        <geom type="mesh" mesh="LLegLink" />
-                        <body name="LShinLink" pos="-0.025 0 -0.35">
+                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LLegLink" />
+                        <geom class="collision" type="mesh" mesh="LLegLink" />
+                        <body name="LShinLink" pos="-0.025 0 -0.32"> <!--pos="-0.025 0 -0.35"-->
                             <inertial pos="-0.0131 0.0025 0.0346" quat="0.653281 0.270598 -0.270598 0.653281" mass="3.095" diaginertia="0.0210667 0.0210667 0.0210667" />
                             <joint name="LShin_0" pos="0 0 0" axis="0 1 0" limited="true" range="0 2.6" armature="0.03988"/>
-                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LShinLink" />
-                            <geom type="mesh" mesh="LShinLink" />
-                            <body name="shin2lankle_1" pos="-0.025 0 -0.37">
+                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="LShinLink" />
+                            <geom class="collision" type="mesh" mesh="LShinLink" />
+                            <body name="shin2lankle_1" pos="-0.025 0 -0.37"> <!--pos="-0.025 0 -0.37"-->
                                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                                 <joint name="LAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="0.03226"/>
                                 <body name="LAnkleLink" pos="0 0 0">
                                     <inertial pos="0.0508 0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
                                     <joint name="LAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
-                                    <geom type="mesh" group="1" mesh="LAnkleLinkFull" condim="6"/>
-                                    <geom type="mesh" mesh="LAnkleLinkFull" />
+                                    <geom class="visual" type="mesh" group="1" mesh="LAnkleLinkFull" condim="6"/>
+                                    <geom class="collision" type="mesh" mesh="LAnkleLinkFull" />
                                 </body>
                             </body>
                         </body>
                     </body>
                 </body>
             </body>
-            <body name="torso2rleg_1" pos="0 -0.1 -0.1">
+            <body name="torso2rleg_1" pos="0 -0.09 -0.1"> <!-- pos="0 -0.1 -0.1"-->
                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                 <joint name="RLeg_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.87 0.52" armature="0.54741"/>
                 <body name="torso2rleg_2" pos="0 0 0">
@@ -484,14 +570,14 @@
                         <inertial pos="-0.0185 -0.0071 -0.178" quat="0.653281 0.270598 -0.270598 0.653281" mass="6.51" diaginertia="0.0421333 0.0421333 0.0421333" />
                         <!-- <joint name="RLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="8.28943" /> -->
                         <joint name="RLeg_2" pos="0 0 0" axis="0 0 1" limited="true" range="-0.8 0.8" armature="1.28943" />
-                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RLegLink" />
-                        <geom type="mesh" mesh="RLegLink" />
-                        <body name="RShinLink" pos="-0.025 0 -0.35">
+                        <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RLegLink" />
+                        <geom class="collision" type="mesh" mesh="RLegLink" />
+                        <body name="RShinLink" pos="-0.025 0 -0.32"> <!--pos="-0.025 0 -0.35"-->
                             <inertial pos="-0.0131 0.0025 0.0346" quat="0.653281 0.270598 -0.270598 0.653281" mass="3.095" diaginertia="0.0210667 0.0210667 0.0210667" />
                             <joint name="RShin_0" pos="0 0 0" axis="0 1 0" limited="true" range="0 2.6" armature="0.03988"/>
-                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RShinLink" />
-                            <geom type="mesh" mesh="RShinLink" />
-                            <body name="shin2rankle_1" pos="-0.025 0 -0.37">
+                            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="RShinLink" />
+                            <geom class="collision" type="mesh" mesh="RShinLink" />
+                            <body name="shin2rankle_1" pos="-0.025 0 -0.37"> <!--pos="-0.025 0 -0.37"-->
                                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                                 <!-- <joint name="RAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="1.1226"/> -->
                                 <joint name="RAnkle_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.78 1.3" armature="0.03226"/>
@@ -499,8 +585,8 @@
                                     <inertial pos="0.0508 -0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
                                     <!-- <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="2.04837"/> -->
                                     <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
-                                    <geom type="mesh" group="1" mesh="RAnkleLinkFull" condim="6"/>
-                                    <geom type="mesh" mesh="RAnkleLinkFull" />
+                                    <geom class="visual" type="mesh" group="1" mesh="RAnkleLinkFull" condim="6"/>
+                                    <geom class="collision" type="mesh" mesh="RAnkleLinkFull" />
                                 </body>
                             </body>
                         </body>
