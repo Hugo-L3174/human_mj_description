@@ -71,6 +71,11 @@
         <exclude body1="base_link" body2="TorsoLink" />
         <exclude body1="base_link" body2="LLegLink" />
         <exclude body1="base_link" body2="RLegLink" />
+        <exclude body1="base_link" body2="LForearmLink" />
+        <exclude body1="base_link" body2="RForearmLink" />
+        <exclude body1="base_link" body2="LHandLink" />
+        <exclude body1="base_link" body2="RHandLink" />
+
         <exclude body1="TorsoLink" body2="HeadLink" />
 
         <exclude body1="TorsoLink" body2="LArmLink" />
@@ -176,37 +181,37 @@
         </body>
 
         <!-- right shoulder -->
-        <body name="mocap_Right Upper Arm" mocap="true" pos="-0.02 -0.15 1.27" >
+        <!-- <body name="mocap_Right Upper Arm" mocap="true" pos="-0.02 -0.17 1.30" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
-        </body>
+        </body> -->
 
         <!-- right forearm -->
-        <body name="mocap_Right Forearm" mocap="true" pos="-0.03 -0.37 1.27" >
+        <body name="mocap_Right Forearm" mocap="true" pos="-0.03 -0.37 1.30" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- right hand -->
-        <body name="mocap_Right Hand" mocap="true" pos="-0.02 -0.60 1.26" >
+        <body name="mocap_Right Hand" mocap="true" pos="-0.02 -0.60 1.29" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left shoulder -->
-        <body name="mocap_Left Upper Arm" mocap="true" pos="-0.02 0.15 1.27" >
+        <!-- <body name="mocap_Left Upper Arm" mocap="true" pos="-0.02 0.15 1.30" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
-        </body>
+        </body> -->
 
         <!-- left forearm -->
-        <body name="mocap_Left Forearm" mocap="true" pos="-0.03 0.37 1.27" >
+        <body name="mocap_Left Forearm" mocap="true" pos="-0.03 0.37 1.30" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left hand -->
-        <body name="mocap_Left Hand" mocap="true" pos="-0.02 0.60 1.26" >
+        <body name="mocap_Left Hand" mocap="true" pos="-0.02 0.60 1.29" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- right upper leg -->
-        <body name="mocap_Right Upper Leg" mocap="true" pos="0 -0.09 0.9" >
+        <body name="mocap_Right Upper Leg" mocap="true" pos="0 -0.09 1" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
@@ -221,12 +226,12 @@
         </body>
 
         <!-- left upper leg -->
-        <body name="mocap_Left Upper Leg" mocap="true" pos="0 0.09 0.9" >
+        <body name="mocap_Left Upper Leg" mocap="true" pos="0 0.09 1" >
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
         <!-- left lower leg -->
-        <body name="mocap_Left Lower Leg" mocap="true" pos="-0.025 0.09 0.58" > 
+        <body name="mocap_Left Lower Leg" mocap="true" pos="-0.025 0.09 0.48" > 
             <geom type="box" group="1" size="0.02 0.02 0.02" contype="0" conaffinity="0" rgba=".9 .5 .5 1"/>
         </body>
 
@@ -267,7 +272,7 @@
                                 </body>
                             </body>
                         </body>
-                        <body name="torso2lshoulder_1" pos="-0.02 0.15 0.30"> <!-- pos="-0.05 0.15 0.30"-->
+                        <body name="torso2lshoulder_1" pos="-0.05 0.17 0.3"> <!-- pos="-0.05 0.15 0.30"-->
                             <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                             <joint name="LArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="0.553"/>
                             <body name="torso2lshoulder_2" pos="0 0 0">
@@ -397,7 +402,7 @@
                                 </body>
                             </body>
                         </body>
-                        <body name="torso2rshoulder_1" pos="-0.02 -0.15 0.30"> <!-- pos="-0.05 -0.15 0.30" -->
+                        <body name="torso2rshoulder_1" pos="-0.05 -0.17 0.3"> <!-- pos="-0.05 -0.15 0.30" -->
                             <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                             <joint name="RArm_0" pos="0 0 0" axis="1 0 0" limited="true" range="-1.42 1.57" armature="0.553"/>
                             <body name="torso2rshoulder_2" pos="0 0 0">
@@ -530,7 +535,7 @@
                     </body>
                 </body>
             </body>
-            <body name="torso2lleg_1" pos="0 0.09 -0.1"> <!-- pos="0 0.1 -0.1"-->
+            <body name="torso2lleg_1" pos="0 0.09 -0.13"> <!-- pos="0 0.1 -0.1"-->
                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                 <joint name="LLeg_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.52 0.87" armature="0.54741"/>
                 <body name="torso2lleg_2" pos="0 0 0">
@@ -560,7 +565,7 @@
                     </body>
                 </body>
             </body>
-            <body name="torso2rleg_1" pos="0 -0.09 -0.1"> <!-- pos="0 -0.1 -0.1"-->
+            <body name="torso2rleg_1" pos="0 -0.09 -0.13"> <!-- pos="0 -0.1 -0.1"-->
                 <inertial pos="0 0 0" mass="0.2" diaginertia="3.2e-06 3.2e-06 3.2e-06" />
                 <joint name="RLeg_0" pos="0 0 0" axis="1 0 0" limited="true" range="-0.87 0.52" armature="0.54741"/>
                 <body name="torso2rleg_2" pos="0 0 0">
@@ -644,10 +649,10 @@
         <weld body1="mocap_Pelvis" body2="base_link" solref="0.01 1" solimp=".9 .9 0.01"/>
         <weld body1="mocap_T8" body2="TorsoLink" solref="0.01 1" solimp=".9 .9 0.01"/>
         <weld body1="mocap_Head" body2="HeadLink" solref="0.01 1" solimp=".9 .9 0.01"/>
-        <weld body1="mocap_Right Upper Arm" body2="torso2rshoulder_1" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <!-- <weld body1="mocap_Right Upper Arm" body2="torso2rshoulder_1" solref="0.01 1" solimp=".9 .9 0.01"/> -->
         <weld body1="mocap_Right Forearm" body2="RForearmLink" solref="0.01 1" solimp=".9 .9 0.01"/>
         <weld body1="mocap_Right Hand" body2="RHandLink" solref="0.01 1" solimp=".9 .9 0.01"/>
-        <weld body1="mocap_Left Upper Arm" body2="torso2lshoulder_1" solref="0.01 1" solimp=".9 .9 0.01"/>
+        <!-- <weld body1="mocap_Left Upper Arm" body2="torso2lshoulder_1" solref="0.01 1" solimp=".9 .9 0.01"/> -->
         <weld body1="mocap_Left Forearm" body2="LForearmLink" solref="0.01 1" solimp=".9 .9 0.01"/>
         <weld body1="mocap_Left Hand" body2="LHandLink" solref="0.01 1" solimp=".9 .9 0.01"/>
         <weld body1="mocap_Right Upper Leg" body2="RLegLink" solref="0.01 1" solimp=".9 .9 0.01"/>
