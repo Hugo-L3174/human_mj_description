@@ -3,6 +3,18 @@
     <size njmax="500" nconmax="100" />
     <option timestep="0.001" iterations="50"  tolerance="1e-10" solver="Newton" jacobian="dense" cone="pyramidal" />
     <!-- <option gravity="0 0 0"/> -->
+
+
+    <default>
+        <default class="collision">
+            <geom condim="3" material="matgeom" type="mesh" group="0" />
+        </default>
+        <default class="visual">
+            <geom condim="3" material="matgeom" type="mesh" group="1" conaffinity="0" contype="0" />
+        </default>
+        <!-- <mesh scale="0.7 0.7 0.7"/> -->
+    </default>
+
     <asset>
         <texture type='skybox' builtin='gradient' width='128' height='128' rgb1='0.4 0.6 0.8' rgb2='0 0 0'/>
         <mesh name="HipsLinkFull" file="HipsLinkFull.stl" /> <!-- scale=" 0.8 0.8 0.8" scale=" 1 1 0.8" scale=" 1 1 0.86" for louise-->
@@ -52,15 +64,95 @@
         <mesh name="RBaby1stPhalange" file="RBaby1stPhalange.stl" />
         <mesh name="RBaby2ndPhalange" file="RBaby2ndPhalange.stl" />
         <mesh name="RBaby3rdPhalange" file="RBaby3rdPhalange.stl" />
+        <texture name="texgeom" type="cube" builtin="flat" mark="cross" width="127" height="1278" rgb1="1 1 1" rgb2="1 1 1" markrgb="1 1 1" random="0.01" />
+        <material name="matgeom" texture="texgeom" texuniform="true" rgba="0.8 0.8 0.8 1" />
     </asset>
 
     <contact>
         <exclude body1="base_link" body2="TorsoLink" />
         <exclude body1="base_link" body2="LLegLink" />
         <exclude body1="base_link" body2="RLegLink" />
+        <exclude body1="base_link" body2="LForearmLink" />
+        <exclude body1="base_link" body2="RForearmLink" />
+        <exclude body1="base_link" body2="LHandLink" />
+        <exclude body1="base_link" body2="RHandLink" />
+
         <exclude body1="TorsoLink" body2="HeadLink" />
+
         <exclude body1="TorsoLink" body2="LArmLink" />
+        <exclude body1="TorsoLink" body2="LElbowLink" />
+        <exclude body1="TorsoLink" body2="LHandLink" />
+        <exclude body1="TorsoLink" body2="LHandThumb0Link" />
+        <exclude body1="TorsoLink" body2="LHandThumb1Link" />
+        <exclude body1="TorsoLink" body2="LHandThumb2Link" />
+        <exclude body1="TorsoLink" body2="LHandIndex1Link" />
+        <exclude body1="TorsoLink" body2="LHandIndex2Link" />
+        <exclude body1="TorsoLink" body2="LHandIndex3Link" />
+        <exclude body1="TorsoLink" body2="LHandMiddle1Link" />
+        <exclude body1="TorsoLink" body2="LHandMiddle2Link" />
+        <exclude body1="TorsoLink" body2="LHandMiddle3Link" />
+        <exclude body1="TorsoLink" body2="LHandRing1Link" />
+        <exclude body1="TorsoLink" body2="LHandRing2Link" />
+        <exclude body1="TorsoLink" body2="LHandRing3Link" />
+        <exclude body1="TorsoLink" body2="LHandBaby1Link" />
+        <exclude body1="TorsoLink" body2="LHandBaby2Link" />
+        <exclude body1="TorsoLink" body2="LHandBaby3Link" />
+
         <exclude body1="TorsoLink" body2="RArmLink" />
+        <exclude body1="TorsoLink" body2="RElbowLink" />
+        <exclude body1="TorsoLink" body2="RHandLink" />
+        <exclude body1="TorsoLink" body2="RHandThumb0Link" />
+        <exclude body1="TorsoLink" body2="RHandThumb1Link" />
+        <exclude body1="TorsoLink" body2="RHandThumb2Link" />
+        <exclude body1="TorsoLink" body2="RHandIndex1Link" />
+        <exclude body1="TorsoLink" body2="RHandIndex2Link" />
+        <exclude body1="TorsoLink" body2="RHandIndex3Link" />
+        <exclude body1="TorsoLink" body2="RHandMiddle1Link" />
+        <exclude body1="TorsoLink" body2="RHandMiddle2Link" />
+        <exclude body1="TorsoLink" body2="RHandMiddle3Link" />
+        <exclude body1="TorsoLink" body2="RHandRing1Link" />
+        <exclude body1="TorsoLink" body2="RHandRing2Link" />
+        <exclude body1="TorsoLink" body2="RHandRing3Link" />
+        <exclude body1="TorsoLink" body2="RHandBaby1Link" />
+        <exclude body1="TorsoLink" body2="RHandBaby2Link" />
+        <exclude body1="TorsoLink" body2="RHandBaby3Link" />
+
+        <exclude body1="LLegLink" body2="LForearmLink" />
+        <exclude body1="LLegLink" body2="LHandLink" />
+        <exclude body1="LLegLink" body2="LHandThumb0Link" />
+        <exclude body1="LLegLink" body2="LHandThumb1Link" />
+        <exclude body1="LLegLink" body2="LHandThumb2Link" />
+        <exclude body1="LLegLink" body2="LHandIndex1Link" />
+        <exclude body1="LLegLink" body2="LHandIndex2Link" />
+        <exclude body1="LLegLink" body2="LHandIndex3Link" />
+        <exclude body1="LLegLink" body2="LHandMiddle1Link" />
+        <exclude body1="LLegLink" body2="LHandMiddle2Link" />
+        <exclude body1="LLegLink" body2="LHandMiddle3Link" />
+        <exclude body1="LLegLink" body2="LHandRing1Link" />
+        <exclude body1="LLegLink" body2="LHandRing2Link" />
+        <exclude body1="LLegLink" body2="LHandRing3Link" />
+        <exclude body1="LLegLink" body2="LHandBaby1Link" />
+        <exclude body1="LLegLink" body2="LHandBaby2Link" />
+        <exclude body1="LLegLink" body2="LHandBaby3Link" />
+
+        <exclude body1="RLegLink" body2="RForearmLink" />
+        <exclude body1="RLegLink" body2="RHandLink" />
+        <exclude body1="RLegLink" body2="RHandThumb0Link" />
+        <exclude body1="RLegLink" body2="RHandThumb1Link" />
+        <exclude body1="RLegLink" body2="RHandThumb2Link" />
+        <exclude body1="RLegLink" body2="RHandIndex1Link" />
+        <exclude body1="RLegLink" body2="RHandIndex2Link" />
+        <exclude body1="RLegLink" body2="RHandIndex3Link" />
+        <exclude body1="RLegLink" body2="RHandMiddle1Link" />
+        <exclude body1="RLegLink" body2="RHandMiddle2Link" />
+        <exclude body1="RLegLink" body2="RHandMiddle3Link" />
+        <exclude body1="RLegLink" body2="RHandRing1Link" />
+        <exclude body1="RLegLink" body2="RHandRing2Link" />
+        <exclude body1="RLegLink" body2="RHandRing3Link" />
+        <exclude body1="RLegLink" body2="RHandBaby1Link" />
+        <exclude body1="RLegLink" body2="RHandBaby2Link" />
+        <exclude body1="RLegLink" body2="RHandBaby3Link" />
+        
         <exclude body1="LArmLink" body2="LForearmLink" />
         <exclude body1="LForearmLink" body2="LHandLink" />
         <exclude body1="RArmLink" body2="RForearmLink" />
@@ -152,8 +244,8 @@
         <!-- ====== robot (actuated part of model) ====== -->
         <body name="base_link" pos="0 0 1">
             <freejoint name="root" />
-            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HipsLinkFull" />
-            <geom type="mesh" mesh="HipsLinkFull" />
+            <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="HipsLinkFull" />
+            <geom class="collision" type="mesh" mesh="HipsLinkFull" />
             <!-- site for root imu sensor -->
 	        <site name="Gyro" size="0.01" pos=" 0 0 0" />
             <body name="hip2torso_1" pos="0 0 0">
@@ -176,8 +268,8 @@
                                 <body name="HeadLink" pos="0 0 0">
                                     <inertial pos="0.0459 0 0.0433" quat="0.653281 0.270598 -0.270598 0.653281" mass="4.7372" diaginertia="0.0630333 0.0630333 0.0630333" />
                                     <joint name="Head_2" pos="0 0 0" axis="0 0 1" limited="true" range="-1.1 1.1" armature="0.18"/>
-                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HeadLinkFull" />
-                                    <geom type="mesh" mesh="HeadLinkFull" />
+                                    <geom class="visual" type="mesh" contype="0" conaffinity="0" group="1" mesh="HeadLinkFull" />
+                                    <geom class="collision" type="mesh" mesh="HeadLinkFull" />
                                 </body>
                             </body>
                         </body>
@@ -474,8 +566,8 @@
                                 <body name="LAnkleLink" pos="0 0 0">
                                     <inertial pos="0.0508 0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
                                     <joint name="LAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
-                                    <geom type="mesh" group="1" mesh="LAnkleLinkFull" condim="6"/>
-                                    <geom type="mesh" mesh="LAnkleLinkFull" />
+                                    <geom class="visual" type="mesh" group="1" mesh="LAnkleLinkFull" condim="6"/>
+                                    <geom class="collision" type="mesh" mesh="LAnkleLinkFull" />
                                 </body>
                             </body>
                         </body>
@@ -507,8 +599,8 @@
                                     <inertial pos="0.0508 -0.0067 -0.0646" quat="0.653281 0.270598 -0.270598 0.653281" mass="10.99" diaginertia="0.00196667 0.00196667 0.00196667" />
                                     <!-- <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="2.04837"/> -->
                                     <joint name="RAnkle_1" pos="0 0 0" axis="1 0 0" limited="true" range="-0.5 0.5" armature="0.04837"/>
-                                    <geom type="mesh" group="1" mesh="RAnkleLinkFull" condim="6"/>
-                                    <geom type="mesh" mesh="RAnkleLinkFull" />
+                                    <geom class="visual" type="mesh" group="1" mesh="RAnkleLinkFull" condim="6"/>
+                                    <geom class="collision" type="mesh" mesh="RAnkleLinkFull" />
                                 </body>
                             </body>
                         </body>
