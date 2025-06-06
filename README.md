@@ -1,10 +1,21 @@
-# Human model description for [`mc_rtc`](https://jrl-umi3218.github.io/mc_rtc/)
+# human_mj_description
 
-This repository contains a human model description ROS package customized for [`mc_human`](https://github.com/jrl-umi3218/mc_human) robot module used by [`mc_rtc`](https://jrl-umi3218.github.io/mc_rtc/) control framework.
+Human model files for mujoco corresponding to the [human_description](https://github.com/jrl-umi3218/human_description) files.
 
-The description package includes
-* Model kinematics and dynamics parameters defined in [URDF file](urdf/human.urdf)
-* Anti-collision [convex shapes](convex)
-* Contact surfaces (and normals) defined in [RSDF files](rsdf)
+The package will install the files in this directory so that [mc_mujoco](https://github.com/rohanpsingh/mc_mujoco) can pick them up automatically.
 
-![human_description](doc/human_description.png "human_description")
+Install
+-------
+
+```bash
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ (sudo) make install
+```
+
+CMake options
+-------------
+
+- `SRC_MODE` if `ON` the files loaded by mujoco will point to the source rather than the installed files (default `OFF`)

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(human_description)
+project(human_mj_description)
 
 if(NOT TARGET mc_mujoco)
   find_package(mc_mujoco REQUIRED)
