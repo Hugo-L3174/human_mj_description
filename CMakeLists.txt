@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.22)
 project(human_mj_description)
 
-if(NOT TARGET mc_mujoco)
+if(HONOR_INSTALL_PREFIX)
+  set(MC_MUJOCO_SHARE_DESTINATION "${CMAKE_INSTALL_PREFIX}")
+elseif(NOT TARGET mc_mujoco::mc_mujoco)
   find_package(mc_mujoco REQUIRED)
 endif()
 
